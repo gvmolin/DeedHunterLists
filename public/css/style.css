@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* Login Page *//* Login Page *//* Login Page */
+
+/* Login Page *//* Login Page *//* Login Page */
+
+
+/* Main app *//* Main app *//* Main app */
+/*font-family: 'Lato', sans-serif;*/
+
+
+    /* Principal *//* Principal *//* Principal */
+
+        body{
+            background-color: #F5F2E7;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+        }
+            /* Header *//* Header *//* Header */
+
+        
+
+            @media only screen and (max-width: 800px) {
+                
+                header{
+                    background: rgb(44,51,51);
+                    background: linear-gradient(180deg, rgba(44,51,51,1) 0%, rgba(127,80,53,1) 15%, rgba(245,242,231,1) 86%); 
+                    margin: 0;
+                    padding: 0;
+                    width: 100vw;
+                }
+
+                nav {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10vh 0;
+                    margin: 0;
+                }
+
+                nav h1,h2,h3,h4,label,select{
+                    color: #211915;
+                    font-family: 'Teko';
+                }
+
+                nav label{
+                    font-size: 3vh;
+                }
+
+                nav h2{
+                    font-size: 2.4vh;
+                    margin-bottom: 1vh;
+                }
+
+                nav img {
+                    height: 10vh;
+                }
+
+                nav section{
+                    margin: 2.5vh 0;
+                }
+
+                nav select{
+                    border-radius: 999px;
+                    border: none;
+                    width: 40vw;
+                    height: 4vh;
+                    margin-top: 0.5vh;
+                    font-size: 2vh;
+                    padding: 0 1vh;
+                }
+
+                nav .search-method{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                nav .search-method div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 1vh 0;
+                }
+
+                nav hr{
+                    background-color: #211915af;
+                    height: 0.5px;
+                    width: 20vw;
+                    border: none;
+                    border-radius: 999px;
+                }
+
+                nav .search-method button{
+                    background-color: #211915;
+                    color: #F5F2E7;
+                    border: none;
+                    border-radius: 100%;
+                    height: 4vh;
+                    width: 4vh;
+                    margin-top: 1vh;
+                }
+
+                nav #search-container {
+                    transition: 1s;
+                }
+
+            }
+            
+
+            
+
+            
+
+            
+
+        /* Header *//* Header *//* Header */
+
+    /* Principal *//* Principal *//* Principal */
+
+
+/* Main app *//* Main app *//* Main app */

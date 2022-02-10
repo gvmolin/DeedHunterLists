@@ -1,0 +1,662 @@
+[
+    {
+        "state":"ALABAMA",
+        "info":{
+            "address":"Tax Division, 50 North Ripley Street, Montgomery, AL 36132",
+            "site":"http://www.alabama.gov/",
+            "phone":"(334) 242-1170",
+            "infoSite":"http://revenue.alabama.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Alabama-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"12% por ano",
+            "redemptionPeriod":"3 anos",
+            "counties":"67"
+        }
+    },
+    {
+        "state":"ALASKA",
+        "info":{
+            "address":"Alaska Municipal League, 217 Second Street, Suite 200",
+            "site":"http://www.akml.org/",
+            "phone":"(907) 586-1325",
+            "infoSite":"http://www.revenue.state.ak.us/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Alaska-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Vários",
+            "interestRate":"N/A",
+            "redemptionPeriod":"até 1 ano",
+            "counties":"27"
+        }
+    },
+    {
+        "state":"ARIZONA",
+        "info":{
+            "address":"Arizona Association of Counties, 1910 W. Jefferson, Phoenix, AZ 85009",
+            "site":"http://www.azcounties.org/index.aspx",
+            "phone":"(602) 252-6563",
+            "infoSite":"http://www.azdor.gov/Home.aspx",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Arizona-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Vários",
+            "interestRate":"16% ao ano",
+            "redemptionPeriod":"3 anos",
+            "counties":"15"
+        }
+    },
+    {
+        "state":"ARKANSAS",
+        "info":{
+            "address":"Commissioner of State Lands, 109 State Capitol Bldg, Little Rock, Arkansas 72201",
+            "site":"http://www.cosl.org/",
+            "phone":"(501) 324-9422",
+            "infoSite":"http://www.dfa.arkansas.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Arkansas-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"10 dias úteis",
+            "counties":"75"
+        }
+    },
+    {
+        "state":"CALIFÓRNIA",
+        "info":{
+            "address":"Califórnia State Controller's Office, P.O.Box 942850, Sacramento, CA 94250-5782",
+            "site":"http://www.sco.ca.gov/",
+            "phone":"(916) 445-2636",
+            "infoSite":"http://www.ftb.ca.gov/",
+            "appraisalDistrictWebsite":"",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"18% ao ano",
+            "redemptionPeriod":"até 2 anos",
+            "counties":"58"
+        }
+    },
+    {
+        "state":"CAROLINA DO NORTE",
+        "info":{
+            "address":"North Carolina Association of County Commissioners, 215 N Dawson Street, Raleigh, NC 27603",
+            "site":"http://www.ncacc.org/",
+            "phone":"(919) 715-2893",
+            "infoSite":"http://www.dornc.com/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Noth-Carolina-Assessor-and-Property-Tax-Records.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"100"
+        }
+    },
+    {
+        "state":"CAROLINA DO SUL",
+        "info":{
+            "address":"South Carolina Association of Counties, 1919 Thumond Mall, Columbia, SC 29201",
+            "site":"http://www.sccounties.org/",
+            "phone":"(803) 252-7255",
+            "infoSite":"http://www.sctax.org/default.htm",
+            "appraisalDistrictWebsite":"",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"8 a 12% ao ano",
+            "redemptionPeriod":"1 ano 18 meses",
+            "counties":"48"
+        }
+    },
+    {
+        "state":"COLORADO",
+        "info":{
+            "address":"Colorado Counties, Inc., 800 Grant St., 5th Floor, Sacramento, CA 94250-5782 # 500",
+            "site":"http://ccionline.org/",
+            "phone":"(303) 861-4076",
+            "infoSite":"http://www.colorado.gov/revenueonline",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/63Colorado-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"Variável",
+            "redemptionPeriod":"3 anos",
+            "counties":"63"
+        }
+    },
+    {
+        "state":"CONNECTICUT",
+        "info":{
+            "address":"Connecticut Conference of Municipalities (CCM)900 Chapel Street, 9th Floor, New Haven, CT 06510",
+            "site":"http://www.ccm-ct.org/",
+            "phone":"(203) 498-3000",
+            "infoSite":"http://www.ct.gov/drs/site/default.asp",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Connecticut-Assessor-and-Property- 8Tax- Records.htm",
+            "category":"Tax Deed Resgatável",
+            "auctionType":"Premium",
+            "interestRate":"18% ao ano",
+            "redemptionPeriod":"1 ano",
+            "counties":"8"
+        }
+    },
+    {
+        "state":"DAKOTA DO NORTE",
+        "info":{
+            "address":"North Dakota Association of Counties, PO Box 877, 1661 Capitol Way Bismarck, ND 58502-0877",
+            "site":"http://www.ndaco.org/",
+            "phone":"(701) 328-7300",
+            "infoSite":"http://www.nd.gov/tax/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Noth-Dakota-Assessor-and-Property- 53Tax- Records.htm",
+            "category":"Deed State",
+            "auctionType":"lance a menor taxa de recuperação",
+            "interestRate":"9 a 12% ao ano",
+            "redemptionPeriod":"4 anos",
+            "counties":"53"
+        }
+    },
+    {
+        "state":"DAKOTA DO SUL",
+        "info":{
+            "address":"South Dakota Association of Counties 211 East Prospect Ave. Pierre, SD 57501",
+            "site":"http://www.sdcounties.org/",
+            "phone":"(605) 224-4554",
+            "infoSite":"dor.sd.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/South-Dakota-Assessor-and-Property-Tax-Records.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"12% ao ano",
+            "redemptionPeriod":"3 a 4 anos",
+            "counties":"66"
+        }
+    },
+    {
+        "state":"DAKOTA DO SUL",
+        "info":{
+            "address":"South Dakota Association of Counties, 211 East Prospect Ave., Pierre, SD 57501",
+            "site":"http://www.sdcounties.org/",
+            "phone":"(605) 224-4554",
+            "infoSite":"dor.sd.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/South-Dakota-Assessor-and-Property-Tax- Records.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"12% ao ano",
+            "redemptionPeriod":"3 a 4 anos",
+            "counties":"66"
+        }
+    },
+    {
+        "state":"DELAWARE",
+        "info":{
+            "address":"Kent County Adm. Complex - 555 Bay Road Dover, DE 19901 New Castle Government Center - 87 Reads Way New Castle, DE 19720 Sussex Finance Administration - P.O.Box 589, 2 The Circle,Georgetown, DE 19947",
+            "site":"http://www.sussexcountyde.gov/",
+            "phone":"Kent: (302) 744-2300, New Castle: (302) 395-5555, Sussex: (302) 855-7741",
+            "infoSite":"http://www.ct.gov/drs/site/default.asp",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Deed State",
+            "auctionType":"Premium",
+            "interestRate":"15%",
+            "redemptionPeriod":"60 dias",
+            "counties":"3"
+        }
+    },
+    {
+        "state":"DISTRITO DE COLUMBIA",
+        "info":{
+            "address":"Office of Tax and Revenue, 1101 4th Street SW #W270, Washington, DC 200240",
+            "site":"http://www.dc.gov/",
+            "phone":"(202) 727-630",
+            "infoSite":"http://otr.cfo.dc.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Lien State",
+            "auctionType":"Premium",
+            "interestRate":"12% ao ano",
+            "redemptionPeriod":"6 meses",
+            "counties":"8"
+        }
+    },
+    {
+        "state":"FLORIDA",
+        "info":{
+            "address":"Florida Assoc. of Counties, 100 South Monroe Street, Tallahassee, FL 32301",
+            "site":"http://www.fl-counties.com/",
+            "phone":"(850) 922-4300",
+            "infoSite":"http://www.fl-counties.com/advocacy/finance-tax-and-administration/property-taxes",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Florida-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e Deeds",
+            "auctionType":"Lance a menor taxa de juros",
+            "interestRate":"18% ao ano",
+            "redemptionPeriod":"2 anos",
+            "counties":"67"
+        }
+    },
+    {
+        "state":"GEORGIA",
+        "info":{
+            "address":"Association of County, Commissioners, 50 Hurt Plaza, Suite 1000, Atlanta, GA 30303",
+            "site":"http://www.accg.org/",
+            "phone":"(404) 522-5022",
+            "infoSite":"http://etax.dor.ga.gov/PTD/PropertyTaxHome.aspx",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Georgia-Assessor-and-Property-Tax-Records.htm",
+            "category":"Deed Resgatável",
+            "auctionType":"Premium",
+            "interestRate":"10% a 20%",
+            "redemptionPeriod":"1 ano",
+            "counties":"159"
+        }
+    },
+    {
+        "state":"HAVAÍ",
+        "info":{
+            "address":"Hawaii State Association of Counties, 4396 Rice Street, Kauai, HI 96766",
+            "site":"http://portal.ehawaii.gov/",
+            "phone":"(808) 547-7001",
+            "infoSite":"http//publicrecords.onlinesearch",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Hawaii-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"12% ao ano",
+            "redemptionPeriod":"1 ano",
+            "counties":"5"
+        }
+    },
+    {
+        "state":"IDAHO",
+        "info":{
+            "address":"Idaho Association of Counties (IAC), 700 W Washington #1623, Boise, ID 83701 ",
+            "site":"http://www.idcounties.org/i-1128.cfm",
+            "phone":"(208) 345-9126",
+            "infoSite":"http://tax.idaho.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Idaho-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"-",
+            "redemptionPeriod":"-",
+            "counties":"44"
+        }
+    },
+    {
+        "state":"ILLINOIS",
+        "info":{
+            "address":"Illinois Department of Revenue, Willard Ice Building, 101 W Jefferson, Springfield, IL 62702",
+            "site":"http://www.revenue.state.il.us/",
+            "phone":"(217) 782-3336",
+            "infoSite":"http://tax.illinois.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Illinois-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e Deeds",
+            "auctionType":"Premium",
+            "interestRate":"18% a 24%",
+            "redemptionPeriod":"De 2 a 3 anos",
+            "counties":"102"
+        }
+    },
+    {
+        "state":"INDIANA",
+        "info":{
+            "address":"Association of Indiana Counties, 101 W Ohio Street, Indianapolis, IN 46204",
+            "site":"http://www.indianacounties.org/",
+            "phone":"(317) 684-3710",
+            "infoSite":"http://indiana.gov/dor/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Indiana-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"10% a 15%",
+            "redemptionPeriod":"1 ano",
+            "counties":"92"
+        }
+    },
+    {
+        "state":"IOWA",
+        "info":{
+            "address":"Iowa State Association of Counties, 501 SW 7th St., Ste. Q Des Moines,, IA - 50309-4540",
+            "site":"http://www.iowacounties.org/",
+            "phone":"(515) 244-7181",
+            "infoSite":"http://www.iowa.gov/tax/index.html",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Lien",
+            "auctionType":"Lance a menor taxa de juros",
+            "interestRate":"24% ao ano",
+            "redemptionPeriod":"1 ano e 9 meses",
+            "counties":"99"
+        }
+    },
+    {
+        "state":"KANSAS",
+        "info":{
+            "address":"Kansas Assoc. of Counties, 300 SW Eighth Ave. 3rd floor, Topeka, KS 66603",
+            "site":"http://www.mocounties.com/",
+            "phone":"(785) 272-2585",
+            "infoSite":"http://dor.mo.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"10% ao ano + 8% de taxas subsequentes",
+            "redemptionPeriod":"1 ano",
+            "counties":"114"
+        }
+    },
+    {
+        "state":"MISSOURI",
+        "info":{
+            "address":"Missouri Assoc. of Counties, 516 East Capitol Avenue, PO Box 234, Jefferson City, MO 65102-0234",
+            "site":"http://www.mocounties.com/",
+            "phone":"(573) 634-2120",
+            "infoSite":"http://dor.mo.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"10% ao ano + 8% de taxas subsequentes",
+            "redemptionPeriod":"1 ano",
+            "counties":"114"
+        }
+    },
+    {
+        "state":"",
+        "info":{
+            "address":"",
+            "site":"",
+            "phone":"",
+            "infoSite":"",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"",
+            "auctionType":"",
+            "interestRate":"",
+            "redemptionPeriod":"",
+            "counties":""
+        }
+    },
+    {
+        "state":"MONTANA",
+        "info":{
+            "address":"Montana Assoc. of Counties, 2715 Skyway Drive, Helena, MT 59602",
+            "site":"http://www.mtcounties.org/",
+            "phone":"(406) 449-4360",
+            "infoSite":"http://revenue.mt.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Montana-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Randômico",
+            "interestRate":"10%",
+            "redemptionPeriod":"2 a 3 anos",
+            "counties":"57"
+        }
+    },
+    {
+        "state":"NEBRASKA",
+        "info":{
+            "address":"Nebraska Assoc. of County Officials, 625 S 14th Street, Lincoln, NE 68508",
+            "site":"http://www.nacone.org/",
+            "phone":"(402) 434-5660",
+            "infoSite":"http://www.revenue.nebraska.gov/Nebraska-Assessor-and-PropertyTax-Records.htm",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Lien",
+            "auctionType":"Lance a menor taxa de participação",
+            "interestRate":"14% ao ano",
+            "redemptionPeriod":"3 anos",
+            "counties":"93"
+        }
+    },
+    {
+        "state":"NEVADA",
+        "info":{
+            "address":"Nevada Assoc. of Counties, 304 South Minnesota St., Carson City, NV 89703",
+            "site":"http://www.nacone.org/",
+            "phone":"(775) 883-7863",
+            "infoSite":"http://www.revenue.nebraska.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Nevada-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e Deeds",
+            "auctionType":"Premium",
+            "interestRate":"12%",
+            "redemptionPeriod":"120 dias ou 2 anos",
+            "counties":"17"
+        }
+    },
+    {
+        "state":"NEW YORK",
+        "info":{
+            "address":"New York State Association of Counties 540 Broadway, 5th Floor Albany, NY 12207",
+            "site":"http://www.nysac.org/",
+            "phone":"(518) 465-1473",
+            "infoSite":"http://www.tax.ny.gov/m",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/New-York-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e Deeds",
+            "auctionType":"Premium",
+            "interestRate":"14",
+            "redemptionPeriod":"1 ano",
+            "counties":"62"
+        }
+    },
+    {
+        "state":"NEW JERSEY",
+        "info":{
+            "address":"New Jersey Assoc. of Counties, 150 W State Street, Trenton, NJ 08608",
+            "site":"http://www.njac.org/",
+            "phone":"(609) 394-3467",
+            "infoSite":"http://www.nj.gov/treasury/revenue/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/New-Jersey-Assessor-and-Property-21TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Lance a menor taxa de participação",
+            "interestRate":"18%",
+            "redemptionPeriod":"2 anos",
+            "counties":"21"
+        }
+    },
+    {
+        "state":"NEW MEXICO",
+        "info":{
+            "address":"New Mexico Association of Counties 444 Galisteo Street Santa Fe, NM 87501",
+            "site":"http://www.nmcounties.org/",
+            "phone":"(505) 983-2101",
+            "infoSite":"http://www.newmexico.gov/tax/ptd/delhmpg.htm",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"33"
+        }
+    },
+    {
+        "state":"OHIO",
+        "info":{
+            "address":"Buckeye State Sheriffs Assoc., 1103 Schrock Rd. Suite 401, Columbus, OH 43229",
+            "site":"http://www.buckeyesheriffs.org/",
+            "phone":"(614) 431-5500",
+            "infoSite":"http://ohio.gov/looking/tax/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Ohio-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e  Deeds",
+            "auctionType":"Premium",
+            "interestRate":"18% ao ano",
+            "redemptionPeriod":"1 ano e 15 dias (TD)",
+            "counties":"88"
+        }
+    },
+    {
+        "state":"OKLAHOMA",
+        "info":{
+            "address":"Association of County Commissioners of Oklahoma 429 NE 50th Street, 3rd floor Oklahoma City, OK 73105",
+            "site":"http://www.okacco.com/",
+            "phone":"(800) 982-6212",
+            "infoSite":"http://www.oktax.state.ok.us/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Oklahoma-Assessor-and-Property-Tax-Records.htm",
+            "category":"Tax Lien",
+            "auctionType":"Randômico",
+            "interestRate":"8% ao ano",
+            "redemptionPeriod":"2 anos",
+            "counties":"77"
+        }
+    },
+    {
+        "state":"OREGON",
+        "info":{
+            "address":"Assoc. of Oregon Counties, 1201 Court St. NE Ste. 300, Salem, OR 97301-4110",
+            "site":"http://www.aocweb.org/aoc/default.aspx",
+            "phone":"(503) 585-8351",
+            "infoSite":"http://www.oregon.gov/DOR/Pages/index.aspx",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Oregon-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"36"
+        }
+    },
+    {
+        "state":"PENNSYLVANIA",
+        "info":{
+            "address":"County Commissioners, Assoc. of Pennsylvania, PO Box 60769, Harrisburg, PA 17106-0769",
+            "site":"http://www.pacounties.org/Pages/default.aspx",
+            "phone":"(717) 232-7554",
+            "infoSite":"http://www.revenue.state.pa.us/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/pennsylvania-Assessor-and-Property-TaxRecords.htm",
+            "category":"Liens e Deeds",
+            "auctionType":"Premium",
+            "interestRate":"10% ao ano",
+            "redemptionPeriod":"1 ano",
+            "counties":"67"
+        }
+    },
+    {
+        "state":"RHODE ISLAND",
+        "info":{
+            "address":"Office of General Treasurer, State House, Room 102, Providence, RI 02903",
+            "site":"http://www.treasury.ri.gov/",
+            "phone":"(401) 222-2397",
+            "infoSite":"http://www.tax.ri.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Rhode-Island-Assessor-and-Property-TaxRecords.htm",
+            "category":"Deed State",
+            "auctionType":"Lance pela menor taxa de juros",
+            "interestRate":"10% + (confira)",
+            "redemptionPeriod":"1 ano",
+            "counties":"5"
+        }
+    },
+    {
+        "state":"TENESSE",
+        "info":{
+            "address":"Tennessee County Services, Association, 226 Capitol Boulevard #700, Nashville, TN 37219-1896",
+            "site":"http://www.tncounties.org/",
+            "phone":"615) 532-3767",
+            "infoSite":"http://www.state.tn.us/revenue/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Tennessee-Assessor-and-Property-Tax-Records.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"10% ao ano",
+            "redemptionPeriod":"1 ano",
+            "counties":"95"
+        }
+    },
+    {
+        "state":"TEXAS",
+        "info":{
+            "address":"Texas Association of Counties, 1210 San Antonio Street, Austin, TX 78701",
+            "site":"http://www.county.org/Pages/default.aspx",
+            "phone":"(512) 478-8753",
+            "infoSite":"http://www.window.state.tx.us/taxes/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Texas-Assessor-and-Property-TaxRecords.htm",
+            "category":"Escritura resgatável",
+            "auctionType":"Premium",
+            "interestRate":"multa de 25%",
+            "redemptionPeriod":"6 meses ou 2 anos",
+            "counties":"254"
+        }
+    },
+    {
+        "state":"UTAH",
+        "info":{
+            "address":"Utah Association of Counties, 5397 S Vine Street, Murray, UT 84107",
+            "site":"http://www.uacnet.org/",
+            "phone":"(801) 265-1331",
+            "infoSite":"Utah-Assessor-and-Property-TaxRecords.htm",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"29"
+        }
+    },
+    {
+        "state":"VERMONT",
+        "info":{
+            "address":"Vermont League of Cities & Towns, 89 Main Street Suite 4, Montpelier, VT 05602-2948",
+            "site":"http://www.vlct.org/",
+            "phone":"(802) 229-9111",
+            "infoSite":"http://www.state.vt.us/tax/index.shtml",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Vermont-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"12% ao ano",
+            "redemptionPeriod":"1 ano",
+            "counties":"14"
+        }
+    },
+    {
+        "state":"VIRGINIA",
+        "info":{
+            "address":"Virginia Association of Counties, 1207 E Main Street, Suite 300, Richmond, VA 23219-3627",
+            "site":"http://www.vaco.org/",
+            "phone":"(804) 788-6652",
+            "infoSite":"http://www.tax.virginia.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Virginia-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"95"
+        }
+    },
+    {
+        "state":"WEST VIRGINIA",
+        "info":{
+            "address":"West Virginia Association of Counties, 2211 Washington St East, Charleston, WV 25311-2118",
+            "site":"http://www.wvaco.org/",
+            "phone":"(304) 346-0591",
+            "infoSite":"",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/West-Virginia-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Lien",
+            "auctionType":"Premium",
+            "interestRate":"12%",
+            "redemptionPeriod":"1 ano",
+            "counties":"55"
+        }
+    },
+    {
+        "state":"WASHINGTON",
+        "info":{
+            "address":"Washington State Association of Counties 206 Tenth Avenue SE Olympia, WA 98501",
+            "site":"http://www.wacounties.org/wsac/",
+            "phone":"(360) 753-1886",
+            "infoSite":"",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Washington-Assessor-and-Property-TaxRecords.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"N/A",
+            "redemptionPeriod":"N/A",
+            "counties":"39"
+        }
+    },
+    {
+        "state":"WISCONSIN",
+        "info":{
+            "address":"Wisconsin Counties Association, 22 E Mifflin Street Suite 900, Madison, WI 53703",
+            "site":"http://www.wicounties.org/",
+            "phone":"(608) 663-7188",
+            "infoSite":"http://www.dor.state.wi.us/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Wisconsin-Assessor-and-Property-Tax- Records.htm",
+            "category":"Tax Deed",
+            "auctionType":"Premium",
+            "interestRate":"18%",
+            "redemptionPeriod":"2 anos",
+            "counties":"72"
+        }
+    },
+    {
+        "state":"WYOMING",
+        "info":{
+            "address":"Wyoming County Commissioners Association, 2300 Capitol Avenue, Hathaway Bldg., 1st floor NW, Cheyenne, WY 82001",
+            "site":"http://www.wyo-wcca.org/",
+            "phone":"(307) 632-5409",
+            "infoSite":"http://revenue.wyo.gov/",
+            "appraisalDistrictWebsite":"http://publicrecords.onlinesearches.com/Wyoming-Assessor-and-Property-TaxRecords.htm",
+            "category":"Lien State",
+            "auctionType":"",
+            "interestRate":"15% + 3% de multa",
+            "redemptionPeriod":"4 anos",
+            "counties":"72"
+        }
+    }
+]

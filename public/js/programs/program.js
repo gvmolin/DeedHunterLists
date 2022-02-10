@@ -149,7 +149,8 @@ export function renderResult(element, container){
                 <div><h2>Sale end_date:</h2><h3>${ddmmyyyyFormat(element.sale_end_date)}</h3></div>
                 <div><h2>Sale price:</h2><h3>${element.sale_price}</h3></div>
                 <div><h2>Sale start_date:</h2><h3>${ddmmyyyyFormat(element.sale_start_date)}</h3></div>
-                <div><h2>State:</h2><h3>${element.state}</h3></div>            
+                <div><h2>State:</h2><h3>${element.state}</h3></div>
+                <button>DOWNLOAD</button>            
             </div>
          
     `

@@ -1,0 +1,11 @@
+:root {
+  --yellow: '#FFB93B';
+  --backgound: '#63666B';
+  --gray-50: '#C8C7C8';  /* List Spacer */
+  --gray-100: '#BABABB';  /* Menu labels */
+  --gray-500: '#393839';
+  --gray-700: '#343334'; /* Land Bank Title */
+  --gray-900: '#2D2C2D';
+  --white: '#FFFFFF';
+  --black: '#000000';
+}

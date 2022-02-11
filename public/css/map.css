@@ -211,3 +211,14 @@ main {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  #result_coountyAndCalendar{
+    display: flex;
+    flex-direction: column;
+  }
+  #result_coountyAndCalendar > div {
+    width: 22rem;
+    margin-bottom: 2rem;
+  }
+}

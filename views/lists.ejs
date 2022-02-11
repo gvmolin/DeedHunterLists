@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/reset.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
-
-    <title>DeedHunter - Lists</title>
-</head>
-<body>
-    <header>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="css/global.css">
+      <link type="text/css" rel="stylesheet" href="css/style.css">
+      <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
+      <title>DeedHunter - Lists</title>
+  </head>
+  <body>
+      <header>
         <nav>        
             <section class="logo">
-                <img src="img/newlogo.png" alt="logo">
-                
+              <img src="img/newlogo.png" alt="logo">
             </section>
-                       
+                        
             <section class="search-method">
                 <div>
-                    <h2>Aho! ${username},</h2>
-                    <label for="">Selecione o critério de pesquisa:</label>
-                    <select name="" id="method">
-                        <option value="none">--</option>
-                        <option value="state">By State</option>
-                    </select>
-                    
+                  <h2>Aho! ${username},</h2>
+                  <label for="">Selecione o critério de pesquisa:</label>
+                  <select name="" id="method">
+                    <option value="none">--</option>
+                    <option value="state">By State</option>
+                  </select>
                 </div>
-                
-                
-                
             </section>
-                <hr>
+
+            <hr>
 
             <section class="search-method" id="search-container"></section>
+            
             <hr id="search-container-hr" style="display: none;">
-
         </nav>
-    </header>
-    <main>
-        <section id="result-section">
+      </header>
 
-            
+      <main>
+          <section id="result-section">
 
-            
-        </section>
+              
 
-
-
+              
+          </section>
 
 
-    </main>
-    <footer>
 
-    </footer>
-    
-    <script src="js/controllers/LISTControllers.js" async type="module"></script>
-    <script src="js/programs/onclickevents.js"></script>
-</body>
+
+
+      </main>
+
+      <footer>
+      </footer>
+      
+      <script src="js/controllers/LISTControllers.js" async type="module"></script>
+      <script src="js/programs/onclickevents.js"></script>
+  </body>
 </html>

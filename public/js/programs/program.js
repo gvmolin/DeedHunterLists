@@ -91,6 +91,12 @@ export function byStateJson(){
     return json
 }
 
+export function stateMapJson(state){
+    const str = `{"state":"${state}"}`
+    const json = JSON.parse(str)
+    return json
+}
+
 export function filterByState(extJson, intJson){ //---> extJson = The json that API send me, intJson = the search criteria on user page
     var arr = []
    
@@ -168,4 +174,168 @@ function ddmmyyyyFormat(dateCont){
     const ddmmyyyy = `${day}/${month}/${date.getFullYear()}`
     
     return ddmmyyyy
+}
+
+export function renderStateInfo(element, container){
+    const div = document.createElement('div')
+    const str = `
+    <div id="result-state">
+
+    <h3 class="result-state__title">
+      Informações do estado ${element.state}
+    </h3>
+
+   <div id="result-state__details">
+       <div class="stateDetails-container">
+          <div> 
+             <span class="stateDetails-container__title">
+                Endereço:
+             </span>
+
+             <span class="stateDetails-container__result">
+                ${element.info.address}
+             </span>
+          </div>
+      
+          <div> 
+             <span class="stateDetails-container__title">
+                Telefone:
+             </span>
+
+             <span class="stateDetails-container__result">
+                ${element.info.phone}
+             </span>
+          </div>
+      
+          <div> 
+             <span class="stateDetails-container__title">
+                Categoria
+             </span>
+
+             <span class="stateDetails-container__result">
+                ${element.info.category}
+             </span>
+          </div>
+      
+          <div> 
+             <span class="stateDetails-container__title">
+                Tipo de leilão:
+             </span>
+
+             <span class="stateDetails-container__result">
+                ${element.info.auctionType}
+             </span>
+
+          </div>
+
+          <div> 
+             <span class="stateDetails-container__title">
+                Número de condados:
+             </span>
+
+             <span class="stateDetails-container__result">
+                ${element.info.counties}
+             </span>
+
+          </div>
+       </div>
+
+       <div class="stateDetails-container">
+          <div> 
+             <span> Website: </span>
+
+             <span class="stateDetails-container__result">
+                <a href="${element.info.site}">
+                   WebSite
+                </a>
+             </span>
+
+          </div>
+      
+          <div> 
+             <span> Site de informações: </span>
+             <span class="stateDetails-container__result"> 
+                <a href="${element.info.infoSite}">
+                   WebSite
+                </a>
+             </span>
+          </div>
+      
+          <div> 
+             <span> Site de associação de condados: </span>
+             <span class="stateDetails-container__result">
+                <a href="${element.info.appraisalDistrictWebsite}">
+                   WebSite
+                </a>
+             </span>
+          </div>
+      
+          <div> 
+             <span> Taxa de Juros: </span>
+             <span class="stateDetails-container__result">
+                ${element.info.interestRate}
+             </span>
+          </div>
+
+          <div> 
+          <span> Prazo de resgate: </span>
+          <span class="stateDetails-container__result">
+             ${element.info.redemptionPeriod}
+          </span>
+       </div>
+
+       </div>
+   </div>
+</div>
+
+<div id="result_coountyAndCalendar">
+    <div class="result_county__container">              
+     <h3 class="result_county__title">
+       Condados em Washington
+     </h3>
+
+       <span class="result_county__item">
+          Adams
+       </span>
+
+       <span class="result_county__item">
+          Asotin
+       </span>
+
+       <span class="result_county__item">
+          Benton
+       </span>
+
+       <span class="result_county__item">
+          Chelan
+       </span>
+
+       <span class="result_county__item">
+          Clallam
+       </span>
+
+    </div>
+
+    <div class="result_county__container">              
+       <h3 class="result_county__title">
+         Calendário
+       </h3>
+   
+         <span class="result_county__item">
+            25/01/2023
+         </span>
+     
+         <span class="result_county__item">
+            08/03/2022
+         </span>
+     
+     
+    </div>
+</div>
+    `
+    div.innerHTML = str
+    container.append(div)
+    div.children[0].addEventListener('click', ()=>{
+        accordion(div.children[0])
+    })
 }

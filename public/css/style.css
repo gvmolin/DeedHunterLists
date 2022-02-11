@@ -207,7 +207,17 @@
             stroke: #000000;
             stroke-width: 5;
         }
-
+        .color-legend{
+            height: 20px;
+            width: 10px;
+        }
+        .text-legend{
+            font-family: 'Teko';
+            font-size: 2rem;
+            color: #353533;
+            letter-spacing: -1.4px;
+            margin-top: -35px;
+        } 
 
 
 

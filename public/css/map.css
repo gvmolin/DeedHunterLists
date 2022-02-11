@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body, select, button {
+  color: var(--font-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--gray-500);
+}
+
+#container {
+  max-width: 1366px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+#app_bar {
+  background: var(--gray-500);
+}
+
+header {
+  background: var(--gray-900);
+  height: 80px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  overflow: hidden;
+}
+
+nav {
+  max-width: 1366px;
+  margin: auto;
+}
+
+nav img {
+  max-width: 75px;
+  max-height: 56px;
+  margin: calc((80px - 56px) / 2);
+  margin-left: 30px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+ nav ul {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+ }
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: var(--gray-100);
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+nav ul li a:hover {
+  color: var(--white);
+}
+
+.checkbtn {
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.fa-bars:before {
+  color: var(--white);
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+ .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--gray-900);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover {
+    background: none;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* Map Section */
+main {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* map result section */
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#result-state{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-900);
+  color: var(--gray-100);
+  padding: 16px;
+  border-radius: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+.result-state__title {
+  font-size: 22px;
+}
+#result-state__details{
+  display: flex;
+}
+.stateDetails-container > div {
+  padding: 12px 12px 0px 12px;
+  width: 28rem;
+  display: flex;
+  justify-content: space-between;
+}
+.stateDetails-container > div > span {
+  font-size: 16px;
+}
+.stateDetails-container__result,
+.stateDetails-container__result > a {
+  color: var(--yellow);
+}
+.stateDetails-container__result > a {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #result-state__details{
+    display: flex;
+    flex-direction: column;
+  }
+  .stateDetails-container {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+  }
+
+  .stateDetails-container > div {
+    width: 20rem;
+  }
+}
+
+#result_coountyAndCalendar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#result_coountyAndCalendar > div {
+  width: 28rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.result_county__container {
+  display: flex;
+  flex-direction: column;
+}
+.result_county__title {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+.result_county__item {
+  border-top: 1px solid var(--gray-50);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  #result_coountyAndCalendar{
+    display: flex;
+    flex-direction: column;
+  }
+  #result_coountyAndCalendar > div {
+    width: 22rem;
+    margin-bottom: 2rem;
+  }
+}

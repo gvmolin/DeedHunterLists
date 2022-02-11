@@ -1,4 +1,4 @@
-import * as manager from "../programs/statesandcounties.js";
+import * as manager from "../programs/program.js";
 import * as path from "../programs/paths.js"
 
 const method = document.querySelector('#method')

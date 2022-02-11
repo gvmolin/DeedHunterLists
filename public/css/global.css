@@ -1,3 +1,24 @@
+/* COLORS */
+:root {
+  --yellow: #FFB93B;
+  --backgound: #63666B;
+  --gray-50: #C8C7C8;  /* List Spacer */
+  --gray-100: #BABABB;  /* Menu labels */
+  --gray-500: #393839;
+  --gray-700: #343334; /* Land Bank Title */
+  --gray-900: #2D2C2D;
+  --white: #FFFFFF;
+  --black: #000000;
+	--font-color: #211915;
+}
+
+/* RESET */
+* {
+	box-sizing: border-box;
+	text-decoration: none;
+  list-style: none;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

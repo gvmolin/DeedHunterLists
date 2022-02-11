@@ -3,8 +3,16 @@ var request = require("request")
 
 module.exports = app => {
     app.get('/', async(req, res)=>{
-        res.render('teste.ejs')
+        res.render('map.ejs')
     })
+
+    app.get('/lists', async(req, res)=>{
+        res.render('lists.ejs')
+    })
+
+
+
+
 
     app.get('/getStates', async(req, res)=>{
         res.send(usStates)

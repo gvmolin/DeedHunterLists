@@ -133,34 +133,81 @@ main {
 }
 
 /* map result section */
-#result{
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#result-state{
   display: flex;
   flex-direction: column;
   background-color: var(--gray-900);
   color: var(--gray-100);
   padding: 16px;
   border-radius: 16px;
-}
-#result-state{
-  display: flex;
-  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
 }
 .result-state__title {
-  font-size: 32px;
+  font-size: 22px;
 }
 #result-state__details{
   display: flex;
 }
 .stateDetails-container > div {
   padding: 12px 12px 0px 12px;
-  width: 22rem;
+  width: 28rem;
   display: flex;
   justify-content: space-between;
 }
 .stateDetails-container > div > span {
-  font-size: 18px;
+  font-size: 16px;
 }
 .stateDetails-container__result,
 .stateDetails-container__result > a {
   color: var(--yellow);
+}
+.stateDetails-container__result > a {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #result-state__details{
+    display: flex;
+    flex-direction: column;
+  }
+  .stateDetails-container {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+  }
+
+  .stateDetails-container > div {
+    width: 20rem;
+  }
+}
+
+#result_coountyAndCalendar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#result_coountyAndCalendar > div {
+  width: 28rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.result_county__container {
+  display: flex;
+  flex-direction: column;
+}
+.result_county__title {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+.result_county__item {
+  border-top: 1px solid var(--gray-50);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

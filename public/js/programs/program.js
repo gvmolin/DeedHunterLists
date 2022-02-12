@@ -187,101 +187,143 @@ export function renderStateInfo(element, container){
 
    <div id="result-state__details">
        <div class="stateDetails-container">
-          <div> 
-             <span class="stateDetails-container__title">
-                Endereço:
-             </span>
 
-             <span class="stateDetails-container__result">
-                ${element.info.address}
-             </span>
-          </div>
-      
-          <div> 
-             <span class="stateDetails-container__title">
-                Telefone:
-             </span>
+          <div class="detailsContainer_item"> 
 
-             <span class="stateDetails-container__result">
-                ${element.info.phone}
-             </span>
-          </div>
-      
-          <div> 
-             <span class="stateDetails-container__title">
-                Categoria
-             </span>
+            <div class="detailsContainer_item_column">
 
-             <span class="stateDetails-container__result">
-                ${element.info.category}
-             </span>
-          </div>
-      
-          <div> 
-             <span class="stateDetails-container__title">
-                Tipo de leilão:
-             </span>
+               <span class="itemColumn-title">
+                  Endereço:
+               </span>
 
-             <span class="stateDetails-container__result">
-                ${element.info.auctionType}
-             </span>
+               <span class="itemColumn-result">
+                  ${element.info.address}
+               </span>
+            
+            </div>
 
-          </div>
+            <div class="detailsContainer_item_column"> 
 
-          <div> 
-             <span class="stateDetails-container__title">
-                Número de condados:
-             </span>
+               <span class="itemColumn-title">
+                  Website: 
+               </span>
 
-             <span class="stateDetails-container__result">
-                ${element.info.counties}
-             </span>
-
-          </div>
-       </div>
-
-       <div class="stateDetails-container">
-          <div> 
-             <span> Website: </span>
-
-             <span class="stateDetails-container__result">
-                <a href="${element.info.site}">
-                   WebSite
-                </a>
-             </span>
+               <span class="itemColumn-result">
+                  <a href="${element.info.site}">
+                     WebSite
+                  </a>
+               </span>
+            </div>
 
           </div>
       
-          <div> 
-             <span> Site de informações: </span>
-             <span class="stateDetails-container__result"> 
-                <a href="${element.info.infoSite}">
-                   WebSite
-                </a>
-             </span>
+          <div class="detailsContainer_item">
+
+            <div class="detailsContainer_item_column"> 
+               <span class="itemColumn-title">
+                  Telefone:
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.phone}
+               </span>
+            </div>
+
+            <div class="detailsContainer_item_column"> 
+
+               <span class="itemColumn-title">
+                  Site de informações:
+               </span>
+
+               <span class="itemColumn-result"> 
+                  <a href="${element.info.infoSite}">
+                     WebSite
+                  </a>
+               </span>
+
+            </div>
+
           </div>
       
-          <div> 
-             <span> Site de associação de condados: </span>
-             <span class="stateDetails-container__result">
-                <a href="${element.info.appraisalDistrictWebsite}">
-                   WebSite
-                </a>
-             </span>
+          <div class="detailsContainer_item">
+
+            <div class="detailsContainer_item_column"> 
+
+               <span class="itemColumn-title">
+                  Categoria
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.category}
+               </span>
+
+            </div>
+
+            <div class="detailsContainer_item_column"> 
+
+               <span class="itemColumn-title">
+                  Site de associação de condados:
+               </span>
+
+               <span class="itemColumn-result">
+                  <a href="${element.info.appraisalDistrictWebsite}">
+                     WebSite
+                  </a>
+               </span>
+            </div>
+
           </div>
       
-          <div> 
-             <span> Taxa de Juros: </span>
-             <span class="stateDetails-container__result">
-                ${element.info.interestRate}
-             </span>
+          <div class="detailsContainer_item">
+            <div class="detailsContainer_item_column">
+               <span class="itemColumn-title">
+                  Tipo de leilão:
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.auctionType}
+               </span>
+            </div>
+
+            <div class="detailsContainer_item_column">
+
+               <span class="itemColumn-title">
+                  Taxa de Juros:
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.interestRate}
+               </span>
+
+            </div>
+
           </div>
 
-          <div> 
-          <span> Prazo de resgate: </span>
-          <span class="stateDetails-container__result">
-             ${element.info.redemptionPeriod}
-          </span>
+          <div class="detailsContainer_item"> 
+            <div class="detailsContainer_item_column">
+
+               <span class="itemColumn-title">
+                  Número de condados:
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.counties}
+               </span>
+            </div>
+
+            <div class="detailsContainer_item_column">
+
+               <span class="itemColumn-title">
+                  Prazo de resgate:
+               </span>
+
+               <span class="itemColumn-result">
+                  ${element.info.redemptionPeriod}
+               </span>
+
+            </div>
+
+          </div>
        </div>
 
        </div>

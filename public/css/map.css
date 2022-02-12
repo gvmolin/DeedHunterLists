@@ -137,7 +137,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
+
 #result-state{
   display: flex;
   flex-direction: column;
@@ -150,40 +152,47 @@ main {
 }
 .result-state__title {
   font-size: 22px;
+  padding: 0 25px;
+  margin: 1rem 0rem;
 }
 #result-state__details{
   display: flex;
 }
-.stateDetails-container > div {
+.stateDetails-container {
+  width: 100%
+}
+
+.stateDetails-container > .detailsContainer_item {
   padding: 12px 12px 0px 12px;
-  width: 28rem;
   display: flex;
   justify-content: space-between;
 }
-.stateDetails-container > div > span {
+.itemColumn-title, .itemColumn-result {
   font-size: 16px;
 }
-.stateDetails-container__result,
-.stateDetails-container__result > a {
+
+.itemColumn-title {
+  margin-right: 1rem;
+}
+
+.itemColumn-result,
+.itemColumn-result > a {
   color: var(--yellow);
 }
-.stateDetails-container__result > a {
+
+.itemColumn-result > a {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  #result-state__details{
-    display: flex;
-    flex-direction: column;
-  }
-  .stateDetails-container {
-    border-top: 1px solid white;
-    margin-top: 1rem;
-  }
+.detailsContainer_item_column {
+  width: 28rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
 
-  .stateDetails-container > div {
-    width: 20rem;
-  }
+.itemColumn-result {
+  text-align: right;
 }
 
 #result_coountyAndCalendar {
@@ -212,13 +221,41 @@ main {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  
+  #result-state, #result_coountyAndCalendar{
+    margin: 2rem;
+  }
+
+  #result-state__details{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stateDetails-container {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+  }
   #result_coountyAndCalendar{
+    width: unset;
     display: flex;
     flex-direction: column;
   }
   #result_coountyAndCalendar > div {
-    width: 22rem;
+    width: unset;
     margin-bottom: 2rem;
   }
+
+  .detailsContainer_item {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+  }
+
+  .detailsContainer_item_column {
+    width: unset;
+    margin: 1rem 0;
+  }
+
 }
+

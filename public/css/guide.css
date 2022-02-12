@@ -1,0 +1,52 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.guide {
+  width: 95%;
+  margin: auto;
+}
+
+.guide-header {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  background: var(--gray-900);
+  height: 80px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.guide-header h1 {
+  color: var(--gray-100);
+  font-size: 1.75rem;
+}
+
+.guide-content {
+  border-radius: 0 0 8px 8px;
+  background: var(--white);
+  padding: 0 1.5rem;
+}
+
+.guide-content__item {
+  min-height: 80px;
+  height: fit-content;
+  padding: 1rem 0;
+    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guide-content__item p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  
+}

@@ -280,6 +280,9 @@
             margin: 0;
             justify-content: center;
         }
+        #form-recover-password{
+            display: none;
+        }
 
 
     /* Principal *//* Principal *//* Principal */

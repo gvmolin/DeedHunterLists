@@ -7,7 +7,7 @@ body, select, button {
 }
 
 body {
-  background: var(--gray-500);
+  background: var(--gray-500) !important;
 }
 
 #container {
@@ -117,13 +117,14 @@ main {
 .color-legend{
   height: 20px;
   width: 10px;
+  border: solid 1px var(--gray-100);
 }
 .text-legend{
   font-family: 'Teko';
   font-size: 2rem;
-  color: #353533;
+  color: var(--gray-100);
   letter-spacing: -1.4px;
-  margin-top: -35px;
+  margin-top: -38px;
 } 
 .m-legend{
   margin-left: 10% !important;

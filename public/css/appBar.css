@@ -50,6 +50,7 @@ header#appBar {
   color: var(--gray-100);
   font-size: 1rem;
   transition: 0.2s;
+  text-decoration: none;
 }
 
 #appBar nav ul li a:hover {

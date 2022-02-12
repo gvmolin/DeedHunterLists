@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 /* COLORS */
 :root {
   --yellow: #FFB93B;
@@ -10,6 +12,15 @@
   --white: #FFFFFF;
   --black: #000000;
 	--font-color: #211915;
+}
+
+#container {
+  max-width: 1366px;
+  margin: 100px auto;
+}
+
+body {
+  background: var(--gray-500);
 }
 
 /* RESET */

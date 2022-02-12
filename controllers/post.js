@@ -1,4 +1,5 @@
 const usCounties = require('../db/geojson/us_counties.json')
+const statesInfo = require('../db/statesGuide.json')
 
 module.exports = app => {
     
@@ -15,6 +16,20 @@ module.exports = app => {
         }
         const jsonStr = `{"data":[${arr}]}`
         res.send(jsonStr)
+    })
+
+    app.post('/statesInfo', async(req, res)=>{
+        var result = {}
+        for(let i = 0; i<statesInfo.length; i++){
+            const statesIndex = statesInfo[i]
+            //console.log(statesIndex.info.id)
+            if(req.body.state == statesIndex.info.id){
+                //console.log(statesIndex.info.id)
+                result = statesIndex
+            }
+        }
+        //console.log(result)
+        res.send(result)
     })
 
 }

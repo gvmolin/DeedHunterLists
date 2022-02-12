@@ -10,6 +10,18 @@ module.exports = app => {
         res.render('lists.ejs')
     })
 
+    app.get('/listCalendar', async(req, res)=>{
+        res.render('listCalendar.ejs')
+    })
+
+    app.get('/landBank', async(req, res)=>{
+        res.render('landBank.ejs')
+    })
+
+    app.get('/guide', async(req, res)=>{
+        res.render('guide.ejs')
+    })
+
 
 
 

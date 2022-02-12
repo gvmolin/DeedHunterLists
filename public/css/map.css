@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 body, select, button {
   color: var(--font-color);
@@ -11,115 +12,7 @@ body {
 
 #container {
   max-width: 1366px;
-  margin: auto;
-  margin-top: 100px;
-}
-
-#app_bar {
-  background: var(--gray-500);
-}
-
-header {
-  background: var(--gray-900);
-  height: 80px;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  overflow: hidden;
-}
-
-nav {
-  max-width: 1366px;
-  margin: auto;
-}
-
-nav img {
-  max-width: 75px;
-  max-height: 56px;
-  margin: calc((80px - 56px) / 2);
-  margin-left: 30px;
-}
-
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-@media (min-width: 768px) {
- nav ul {
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
- }
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a {
-  color: var(--gray-100);
-  font-size: 1rem;
-  transition: 0.2s;
-}
-
-nav ul li a:hover {
-  color: var(--white);
-}
-
-.checkbtn {
-  font-size: 30px;
-  float: right;
-  line-height: 80px;
-  margin-right: 30px;
-  cursor: pointer;
-  display: none;
-}
-
-.fa-bars:before {
-  color: var(--white);
-}
-
-#check {
-  display: none;
-}
-
-@media (max-width: 768px) {
- .checkbtn {
-    display: block;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: var(--gray-900);
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-
-  nav ul li {
-    display: block;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  a:hover {
-    background: none;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
+  margin: 100px auto;
 }
 
 /* Map Section */
@@ -137,7 +30,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
+
 #result-state{
   display: flex;
   flex-direction: column;
@@ -150,40 +45,47 @@ main {
 }
 .result-state__title {
   font-size: 22px;
+  padding: 0 25px;
+  margin: 1rem 0rem;
 }
 #result-state__details{
   display: flex;
 }
-.stateDetails-container > div {
+.stateDetails-container {
+  width: 100%
+}
+
+.stateDetails-container > .detailsContainer_item {
   padding: 12px 12px 0px 12px;
-  width: 28rem;
   display: flex;
   justify-content: space-between;
 }
-.stateDetails-container > div > span {
+.itemColumn-title, .itemColumn-result {
   font-size: 16px;
 }
-.stateDetails-container__result,
-.stateDetails-container__result > a {
+
+.itemColumn-title {
+  margin-right: 1rem;
+}
+
+.itemColumn-result,
+.itemColumn-result > a {
   color: var(--yellow);
 }
-.stateDetails-container__result > a {
+
+.itemColumn-result > a {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  #result-state__details{
-    display: flex;
-    flex-direction: column;
-  }
-  .stateDetails-container {
-    border-top: 1px solid white;
-    margin-top: 1rem;
-  }
+.detailsContainer_item_column {
+  width: 28rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
 
-  .stateDetails-container > div {
-    width: 20rem;
-  }
+.itemColumn-result {
+  text-align: right;
 }
 
 #result_coountyAndCalendar {
@@ -193,7 +95,7 @@ main {
 }
 #result_coountyAndCalendar > div {
   width: 28rem;
-  background-color: white;
+  background-color: var(--white);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -212,13 +114,68 @@ main {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
+.color-legend{
+  height: 20px;
+  width: 10px;
+}
+.text-legend{
+  font-family: 'Teko';
+  font-size: 2rem;
+  color: #353533;
+  letter-spacing: -1.4px;
+  margin-top: -35px;
+} 
+.m-legend{
+  margin-left: 10% !important;
+}
+
+.search-main{
+  width: 70vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  margin: 0;
+  justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+  
+  #result-state, #result_coountyAndCalendar{
+    margin: 2rem;
+  }
+
+  #result-state__details{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stateDetails-container {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+  }
   #result_coountyAndCalendar{
+    width: unset;
     display: flex;
     flex-direction: column;
   }
   #result_coountyAndCalendar > div {
-    width: 22rem;
+    width: unset;
     margin-bottom: 2rem;
   }
+
+  .detailsContainer_item {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+  }
+
+  .detailsContainer_item_column {
+    width: unset;
+    margin: 1rem 0;
+  }
+
 }
+

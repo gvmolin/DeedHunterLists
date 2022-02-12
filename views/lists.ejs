@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link type="text/css" rel="stylesheet" href="css/global.css">
       <link type="text/css" rel="stylesheet" href="css/appBar.css">
+      <link type="text/css" rel="stylesheet" href="css/lists.css">
       <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
       <title>DeedHunter - Listagem / Calendário</title>
   </head>
@@ -26,12 +27,82 @@
             <li> <a href="/lists">Listagem / Calendário</a> </li>
             <li> <a href="/landBank">LandBank</a> </li>
             <li> <a href="/guide">Guia</a> </li>
-            <li> <a href="#">DeedHundter</a> </li>
+            <li> <a href="#">DeedHunter</a> </li>
           </ul>
         </nav>
       </header>
 
-      <header>
+      <main>
+        <div class="tableContainer">
+          <div class="tableContainer-header">
+            <h1>Listagens</h1>
+
+            <div class="tableContainer-header_paginationContainer">
+              <div class="paginationContainer-pagination" >
+                Exibindo <input type="number" value="10" step="5" /> itens por página
+              </div>
+
+              <div class="paginationContainer-search" >
+                Buscar: <input type="text" />
+              </div>
+            </div>
+          </div>
+          
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" >Estado</th>
+                <th scope="col" >Condado</th>
+                <th scope="col" >Data</th>
+                <th scope="col" >Propriedades</th>
+                <th scope="col" >Volume</th>
+                <th scope="col" >Tipo</th>
+                <th scope="col" >Arquivo</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <!-- <header>
         <nav>        
           <section class="search-method">
             <div>
@@ -48,12 +119,12 @@
           
           <hr id="search-container-hr" style="display: none;">
         </nav>
-      </header>
+      </header> -->
 
-      <main>
+      <!-- <main>
         <section id="result-section">
         </section>
-      </main>
+      </main> -->
 
       <footer>
       </footer>

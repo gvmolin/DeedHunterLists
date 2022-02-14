@@ -80,7 +80,7 @@ export async function loadStates(){
     }
 }
 
-export function byStateJson(){
+/*export function byStateJson(){
     var state = document.querySelector('#select-state')
     state = state.options[state.selectedIndex].innerHTML
     const county = document.querySelector('#select-county').value
@@ -89,9 +89,9 @@ export function byStateJson(){
     const json = JSON.parse(str)
     //console.log(json)
     return json
-}
+}*/
 
-export function stateMapJson(state){
+export function stateJson(state){
     const str = `{"state":"${state}"}`
     const json = JSON.parse(str)
     return json
@@ -124,47 +124,30 @@ export function filterByCounty(extJson, intJson){ //---> extJson = The json that
 }
 
 export function renderResult(element, container){
-    const div = document.createElement('div')
-    div.classList.add('result-item')
-    const str = `
-        
-            <div class="principal-content">
-                <div><h2>Zip code:</h2><h3>${element.zip_code}</h3></div>
-            </div>
-            <div style="display:none;" class="hidden-content">
-                <hr>
-                <div><h2>Assessor address:</h2><h3>${element.assessor_address}</h3></div>
-                <div><h2>Assessor city:</h2><h3>${element.assessor_city}</h3></div>
-                <div><h2>Assessor entity:</h2><h3>${element.assessor_entity}</h3></div>
-                <div><h2>Assessor phone:</h2><h3>${element.assessor_phone}</h3></div>
-                <div><h2>Assessor zip:</h2><h3>${element.assessor_zip}</h3></div>
-                <div><h2>Auction type:</h2><h3>${element.auction_type}</h3></div>
-                <div><h2>Bid procedures:</h2><h3>${element.bid_procedures}</h3></div>
-                <div><h2>County city:</h2><h3>${element.county_city}</h3></div>
-                <div><h2>County email:</h2><h3>${element.county_email}</h3></div>
-                <div><h2>County fax:</h2><h3>${element.county_fax}</h3></div>
-                <div><h2>County name:</h2><h3>${element.county_name}</h3></div>
-                <div><h2>County phone:</h2><h3>${element.county_phone}</h3></div>
-                <div><h2>Current treasurer:</h2><h3>${element.current_treasurer}</h3></div>
-                <div><h2>Records address:</h2><h3>${element.records_address}</h3></div>
-                <div><h2>Records city:</h2><h3>${element.records_city}</h3></div>
-                <div><h2>Records entity:</h2><h3>${element.records_entity}</h3></div>
-                <div><h2>Records phone:</h2><h3>${element.records_phone}</h3></div>
-                <div><h2>Records zip:</h2><h3>${element.records_zip}</h3></div>
-                <div><h2>Sale date:</h2><h3>${ddmmyyyyFormat(element.sale_date)}</h3></div>
-                <div><h2>Sale end_date:</h2><h3>${ddmmyyyyFormat(element.sale_end_date)}</h3></div>
-                <div><h2>Sale price:</h2><h3>${element.sale_price}</h3></div>
-                <div><h2>Sale start_date:</h2><h3>${ddmmyyyyFormat(element.sale_start_date)}</h3></div>
-                <div><h2>State:</h2><h3>${element.state}</h3></div>
-                <button>DOWNLOAD</button>            
-            </div>
-         
-    `
-    div.innerHTML = str
-    container.append(div)
-    div.children[0].addEventListener('click', ()=>{
-        accordion(div.children[0])
-    })
+   const div = document.createElement('tr')
+   //div.classList.add('result-item')
+   const str = `
+         <td data-label="Estado" >${element.state}</td>
+         <td data-label="Condado" >${element.county_name}</td>
+         <td data-label="Data" >${ddmmyyyyFormat(element.sale_date)}</td>
+         <td data-label="Propriedades" >${element.parcel_num}</td>
+         <td data-label="Procedimentos" >${element.bid_procedures}</td>
+         <td data-label="Tipo" >${element.auction_type}</td>
+         <td data-label="Arquivo" >
+           <button id="${element.auto_id}" value="${element.auto_id}">Download</button>
+           <div style="display:none;">${element.auto_id}</div>
+         </td> 
+   `
+   div.innerHTML = str
+   container.append(div)
+   div.children[0].addEventListener('click', ()=>{
+       accordion(div.children[0])
+   })
+
+   document.getElementById(element.auto_id).addEventListener('click', ()=>{
+      const url = `https://www.taxsaleresources.com/DHHandlerinterim.aspx?UserID=12345&UserName=dhapi&Password=7jOsbudk[!&file_id=${element.auto_id}&file_type=raw_list`
+      window.open(url, '_blank');
+   })
 }
 
 function ddmmyyyyFormat(dateCont){
@@ -330,7 +313,7 @@ export function renderStateInfo(element, container){
    </div>
 </div>
 
-<div id="result_coountyAndCalendar">
+<!--<div id="result_coountyAndCalendar">
     <div class="result_county__container">              
      <h3 class="result_county__title">
        Condados em Washington
@@ -373,7 +356,7 @@ export function renderStateInfo(element, container){
      
      
     </div>
-</div>
+</div>-->
     `
     div.innerHTML = str
     container.append(div)

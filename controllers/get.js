@@ -22,6 +22,10 @@ module.exports = app => {
         res.render('guide.ejs')
     })
 
+    app.get('/login', async(req, res)=>{
+        res.render('login.ejs')
+    })
+
 
 
 

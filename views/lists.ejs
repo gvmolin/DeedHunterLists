@@ -11,7 +11,7 @@
       <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
       <title>DeedHunter - Listagem / Calendário</title>
   </head>
-  <body>
+  <body style="background-image: url(img/bg.png);">
     <div id="container">
       <!-- Menu -->
       <header id="appBar" >
@@ -25,7 +25,7 @@
 
           <ul>
             <li> <a href="/">Mapa</a> </li>
-            <li> <a href="/lists">Listagem / Calendário</a> </li>
+            <li> <a href="/lists">Listas</a> </li>
             <li> <a href="/landBank">LandBank</a> </li>
             <li> <a href="/guide">Guia</a> </li>
             <li> <a href="#">DeedHunter</a> </li>
@@ -39,12 +39,14 @@
             <h1>Listagens</h1>
 
             <div class="tableContainer-header_paginationContainer">
-              <div class="paginationContainer-pagination" >
+              <!--<div class="paginationContainer-pagination" >
                 Exibindo <input type="number" value="10" step="5" /> itens por página
-              </div>
+              </div>-->
 
               <div class="paginationContainer-search" >
-                Buscar: <input type="text" />
+                Estado: 
+                <select name="" id="states-select"></select>
+                <button id="search-button">Buscar</button>
               </div>
             </div>
           </div>
@@ -56,14 +58,14 @@
                 <th scope="col" >Condado</th>
                 <th scope="col" >Data</th>
                 <th scope="col" >Propriedades</th>
-                <th scope="col" >Volume</th>
+                <th scope="col" >Procedimento</th>
                 <th scope="col" >Tipo</th>
                 <th scope="col" >Arquivo</th>
               </tr>
             </thead>
 
             <tbody>
-              <tr>
+              <!--<tr>
                 <td data-label="Estado" >Alabama</td>
                 <td data-label="Condado" >Wilcox</td>
                 <td data-label="Data" >07/17/2020</td>
@@ -97,7 +99,7 @@
                 <td data-label="Arquivo" >
                   <button>Download</button>
                 </td>
-              </tr>
+              </tr>-->
             </tbody>
           </table>
         </div>

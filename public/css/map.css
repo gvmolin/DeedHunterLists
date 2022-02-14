@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body, select, button {
+  color: var(--font-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  /*background: var(--gray-500);*/
+  background-image: url("img/bg.png");
+}
+
+#container {
+  max-width: 1366px;
+  margin: 100px auto;
+}
+
+/* Map Section */
+main {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* map result section */
+#mapContainer {
+  width: 100%;
+  height: auto;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#result-state{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-900);
+  color: var(--gray-100);
+  padding: 16px;
+  border-radius: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
+}
+.result-state__title {
+  font-size: 22px;
+  padding: 0 25px;
+  margin: 1rem 0rem;
+}
+#result-state__details{
+  display: flex;
+}
+.stateDetails-container {
+  width: 100%
+}
+
+.stateDetails-container > .detailsContainer_item {
+  padding: 12px 12px 0px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.itemColumn-title, .itemColumn-result {
+  font-size: 16px;
+}
+
+.itemColumn-title {
+  margin-right: 1rem;
+}
+
+.itemColumn-result,
+.itemColumn-result > a {
+  color: var(--yellow);
+}
+
+.itemColumn-result > a {
+  text-decoration: underline;
+}
+
+.detailsContainer_item_column {
+  width: 28rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.itemColumn-result {
+  text-align: right;
+}
+
+#result_coountyAndCalendar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#result_coountyAndCalendar > div {
+  width: 28rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.result_county__container {
+  display: flex;
+  flex-direction: column;
+}
+.result_county__title {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+.result_county__item {
+  border-top: 1px solid var(--gray-50);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  
+  #result-state, #result_coountyAndCalendar{
+    margin: 2rem;
+  }
+
+  #result-state__details{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stateDetails-container {
+    border-top: 1px solid white;
+    margin-top: 1rem;
+  }
+  #result_coountyAndCalendar{
+    width: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  #result_coountyAndCalendar > div {
+    width: unset;
+    margin-bottom: 2rem;
+  }
+
+  .detailsContainer_item {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+  }
+
+  .detailsContainer_item_column {
+    width: unset;
+    margin: 1rem 0;
+  }
+
+}
+
+/* select state mobile */
+@media (min-width: 601px) {
+  #selectStateContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #selectStateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .selectState-label {
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--gray-50);
+    font-size: 1.5rem;
+  }
+  
+  .selectState-combo {
+    width: 100%;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  .statesOptions {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+  }
+  
+  .statesOptions > option {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  
+}

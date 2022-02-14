@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/x-icon" href="/img/logo.png">
+      <link type="text/css" rel="stylesheet" href="css/global.css">
+      <link type="text/css" rel="stylesheet" href="css/appBar.css">
+      <link type="text/css" rel="stylesheet" href="css/lists.css">
+      <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
+      <title>DeedHunter - Listagem / Calendário</title>
+  </head>
+  <body style="background-image: url(img/bg.png);">
+    <div id="container">
+      <!-- Menu -->
+      <header id="appBar" >
+        <nav>
+          <input type="checkbox" id="check" >
+          <label for="check" class="checkbtn" >
+            <i class="fas fa-bars" ></i>
+          </label>
+
+          <img src="img/logo.png" alt="logo">
+
+          <ul>
+            <li> <a href="/">Mapa</a> </li>
+            <li> <a href="/lists">Listas</a> </li>
+            <li> <a href="/landBank">LandBank</a> </li>
+            <li> <a href="/guide">Guia</a> </li>
+            <li> <a href="#">DeedHunter</a> </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="tableContainer">
+          <div class="tableContainer-header">
+            <h1>Listagens</h1>
+
+            <div class="tableContainer-header_paginationContainer">
+              <!--<div class="paginationContainer-pagination" >
+                Exibindo <input type="number" value="10" step="5" /> itens por página
+              </div>-->
+
+              <div class="paginationContainer-search" >
+                Estado: 
+                <select name="" id="states-select"></select>
+                <button id="search-button">Buscar</button>
+              </div>
+            </div>
+          </div>
+          
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" >Estado</th>
+                <th scope="col" >Condado</th>
+                <th scope="col" >Data</th>
+                <th scope="col" >Propriedades</th>
+                <th scope="col" >Procedimento</th>
+                <th scope="col" >Tipo</th>
+                <th scope="col" >Arquivo</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!--<tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Estado" >Alabama</td>
+                <td data-label="Condado" >Wilcox</td>
+                <td data-label="Data" >07/17/2020</td>
+                <td data-label="Propriedades" >148</td>
+                <td data-label="Volume" >000</td>
+                <td data-label="Tipo" >Lien</td>
+                <td data-label="Arquivo" >
+                  <button>Download</button>
+                </td>
+              </tr>-->
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <!-- <header>
+        <nav>        
+          <section class="search-method">
+            <div>
+              <h2>Aho! ${username},</h2>
+              <label for="">Selecione o critério de pesquisa:</label>
+              <select name="" id="method">
+                <option value="none">--</option>
+                <option value="state">By State</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="search-method" id="search-container"></section>
+          
+          <hr id="search-container-hr" style="display: none;">
+        </nav>
+      </header> -->
+
+      <!-- <main>
+        <section id="result-section">
+        </section>
+      </main> -->
+
+      <footer>
+      </footer>
+    </div>
+      
+    <script src="js/controllers/LISTControllers.js" async type="module"></script>
+    <script src="js/programs/onclickevents.js"></script>
+  </body>
+</html>

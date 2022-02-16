@@ -10,4 +10,20 @@ recover.addEventListener('click', async()=>{ //<-------controller
     //alert("Chegou até aqui");
 });
 
+const loginBtn = document.querySelector('#btn-login')
+loginBtn.addEventListener('click', async(event)=>{
+    event.preventDefault()
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+
+    const str = `
+        {
+            "email":"${email}",
+            "password":"${password}"
+        }
+    `
+
+    const json = JSON.parse(str)
+    await manager.postData(json, path.login)
+})
 

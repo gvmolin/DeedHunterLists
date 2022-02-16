@@ -1,4 +1,5 @@
 const usStates = require('../db/geojson/us_states.json')
+const guide = require('../db/statesGuide.json')
 var request = require("request")
 
 module.exports = app => {
@@ -45,5 +46,9 @@ module.exports = app => {
                 res.send(body)
             }
         })
+    })
+
+    app.get('/getGuide', async(req, res)=>{
+        res.send(guide)
     })
 }

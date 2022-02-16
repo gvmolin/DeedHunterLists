@@ -1,5 +1,7 @@
 const usCounties = require('../db/geojson/us_counties.json')
 const statesInfo = require('../db/statesGuide.json')
+const hasher = require('wordpress-hash-node');
+const dbProgram = require('../models/sqlQueries')
 
 module.exports = app => {
     
@@ -30,6 +32,12 @@ module.exports = app => {
         }
         //console.log(result)
         res.send(result)
+    })
+
+    app.post('/login', async(req, res)=>{
+        const result =  await dbProgram.selectUser(req.body.email)
+        var checked = hasher.CheckPassword(req.body.password, result[0].user_pass);
+        console.log(checked)
     })
 
 }

@@ -1,13 +1,10 @@
 const customExpress = require("./config/customExpress")
 const app = customExpress()
+const mariadb = require('mariadb')
+const dbconnect = require("./db/poolConnect")
 
-/*dbClient.connect(error => {
-    if(error){
-        console.log(console.log(error))
-    }
-    else{
-        console.log('conectado no banco de dados <-----------')
-        tables.init(dbClient)
-    }
-})*/
-app.listen(process.env.PORT, ()=> console.log(`servidor rodando na porta ${process.env.PORT} <-----------`))////////////
+app.listen(process.env.PORT, async()=> {
+    await dbconnect()
+    console.log(`servidor rodando na porta ${process.env.PORT} <-----------`)
+
+})////////////

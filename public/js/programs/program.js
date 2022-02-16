@@ -165,7 +165,7 @@ export function renderStateInfo(element, container){
     <div id="result-state">
 
     <h3 class="result-state__title">
-      Informações do estado ${element.state}
+      ${element.state}
     </h3>
 
    <div id="result-state__details">

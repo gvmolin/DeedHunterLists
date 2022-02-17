@@ -364,3 +364,25 @@ export function renderStateInfo(element, container){
         accordion(div.children[0])
     })
 }
+
+export function renderGuideItem(element, container){
+   const div = document.createElement('div')
+   div.classList.add('guide')
+
+   const str = `
+      <div class="guide-header">
+         <h1>${element.state}</h1>
+      </div>
+
+      <div class="guide-content">
+        <div class="guide-content__item">
+          <p>
+            ${element.info.details}
+          </p>
+        </div>
+      </div>
+   
+   `
+   div.innerHTML = str
+   container.append(div)
+}

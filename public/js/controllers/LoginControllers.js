@@ -24,6 +24,14 @@ loginBtn.addEventListener('click', async(event)=>{
     `
 
     const json = JSON.parse(str)
-    await manager.postData(json, path.login)
+    const result = await manager.postData(json, path.login)
+
+
+    console.log(result)
+    if(result.login == 'true'){
+        window.location.replace("/");
+    }else{
+        alert('EMAIL OU SENHA INCORRETO(S)')
+    }
 })
 

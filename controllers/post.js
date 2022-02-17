@@ -36,8 +36,23 @@ module.exports = app => {
 
     app.post('/login', async(req, res)=>{
         const result =  await dbProgram.selectUser(req.body.email)
-        var checked = hasher.CheckPassword(req.body.password, result[0].user_pass);
-        console.log(checked)
+        console.log(result.length)
+        //console.log(typeof(result[0].user_pass))
+
+        if(result.length > 0){
+            var checked = hasher.CheckPassword(req.body.password, result[0].user_pass);
+        }else{
+            res.send(`{"login":"false"}`)
+        }
+
+        if(checked == true){
+            req.session.isAuth = true
+            req.session.user = result[0].user_login
+            res.send(`{"login":"${req.session.isAuth}"}`)
+            
+        }else{
+            res.send(`{"login":"false"}`)
+        }
     })
 
 }

@@ -1,31 +1,34 @@
 const usStates = require('../db/geojson/us_states.json')
 const guide = require('../db/statesGuide.json')
 var request = require("request")
+const isAuth = require('../models/isAuth')
 
 module.exports = app => {
-    app.get('/', async(req, res)=>{
-        res.render('map.ejs')
-    })
-
-    app.get('/lists', async(req, res)=>{
-        res.render('lists.ejs')
-    })
-
-    app.get('/listCalendar', async(req, res)=>{
-        res.render('listCalendar.ejs')
-    })
-
-    app.get('/landBank', async(req, res)=>{
-        res.render('landBank.ejs')
-    })
-
-    app.get('/guide', async(req, res)=>{
-        res.render('guide.ejs')
-    })
-
     app.get('/login', async(req, res)=>{
         res.render('login.ejs')
     })
+
+    app.get('/', isAuth, async(req, res)=>{
+        res.render('map.ejs', {user : req.session.user})
+    })
+
+    app.get('/lists', isAuth, async(req, res)=>{
+        res.render('lists.ejs')
+    })
+
+    app.get('/listCalendar',isAuth, async(req, res)=>{
+        res.render('listCalendar.ejs')
+    })
+
+    app.get('/landBank', isAuth, async(req, res)=>{
+        res.render('landBank.ejs')
+    })
+
+    app.get('/guide',  async(req, res)=>{
+        res.render('guide.ejs')
+    })
+
+    
 
 
 
@@ -50,5 +53,6 @@ module.exports = app => {
 
     app.get('/getGuide', async(req, res)=>{
         res.send(guide)
+        console.log('fetch')
     })
 }

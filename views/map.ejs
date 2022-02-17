@@ -22,11 +22,11 @@
             <i class="fas fa-bars" ></i>
           </label>
 
-          <img src="img/logo.png" alt="logo">
+          <a href="/"><img src="img/logo.png" alt="logo"></a>
 
           <ul>
             <li> <a href="/">Mapa</a> </li>
-            <li> <a href="/lists">Listagem / Calendário</a> </li>
+            <li> <a href="/lists">Listas</a> </li>
             <li> <a href="/landBank">LandBank</a> </li>
             <li> <a href="/guide">Guia</a> </li>
             <li> <a href="#">DeedHunter</a> </li>
@@ -36,7 +36,11 @@
 
       <main>
          <div class="search-main">
+            <section id="client-name">
+               <h1>Aho! <%= user %>, clique no estado desejado para abrir informações!</h1>
+            </section>
             <section id='map' class="search-method" style="display: flex; justify-content: center;">
+               
                <svg
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:cc="http://creativecommons.org/ns#"

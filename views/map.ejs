@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link type="text/css" rel="stylesheet" href="css/global.css">
     <link type="text/css" rel="stylesheet" href="css/map.css">
     <link type="text/css" rel="stylesheet" href="css/appBar.css">
@@ -22,14 +22,15 @@
             <i class="fas fa-bars" ></i>
           </label>
 
-          <a href="/"><img src="img/logo.png" alt="logo"></a>
+          <a href="/"><img src="img/logo.png" alt="logo" id="logo"></a>
 
           <ul>
             <li> <a href="/">Mapa</a> </li>
             <li> <a href="/lists">Listas</a> </li>
             <li> <a href="/landBank">LandBank</a> </li>
             <li> <a href="/guide">Guia</a> </li>
-            <li> <a href="#">DeedHunter</a> </li>
+            <li> <a href="/attorneys">Attorneys</a> </li>
+            <li> <a href="/termos">Termos</a> </li>
           </ul>
         </nav>
       </header>
@@ -68,7 +69,7 @@
                  </defs>
 
                  <defs>
-                    <pattern id="pattern_1" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(45)" fill="#4b2400">
+                    <pattern id="pattern_1" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(90)" fill="#4b2400">
                        <g>
                           <rect id="svg_8" height="601" width="843" y="-0.4" x="-11" fill="#253f21"/>
                           <rect stroke-width="0" stroke="#000" id="svg_1" height="600.99999" width="12" y="-1.79999" x="0.4" fill="#a05f3d"/>
@@ -79,7 +80,7 @@
                     </pattern>
                  </defs>
                  <defs>
-                    <pattern id="pattern_2" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(45)" fill="#4b2400">
+                    <pattern id="pattern_2" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(90)" fill="#4b2400">
                        <g>
                           <rect stroke-width="0" stroke="#000" id="svg_10" height="601" width="843" y="-0.4" x="-11" fill="#253f21"/>
                           <rect stroke-width="0" stroke="#000" id="svg_9" height="600.99999" width="12" y="-1.79999" x="0.4" fill="#943f22"/>
@@ -92,17 +93,17 @@
            
                  <defs>
                     <pattern id="pattern_ma" height="10" width="10">
-                        <image height="7%" xlink:href="img/padrao_3.png"></image>
+                        <image height="7%" xlink:href="img/padrao_3.jpg"></image>
                     </pattern>
                 </defs>
                 <defs>
                     <pattern id="pattern_oh" height="10" width="10">
-                       <image height="14%" xlink:href="img/padrao_3.png"></image>
+                       <image height="14%" xlink:href="img/padrao_3.jpg"></image>
                     </pattern>
                  </defs>
                  <defs>
                     <pattern id="pattern_ri" height="10" width="10">
-                       <image height="3%" xlink:href="img/padrao_3.png"></image>
+                       <image height="3%" xlink:href="img/padrao_3.jpg"></image>
                     </pattern>
                  </defs>
                  <path
@@ -494,18 +495,15 @@
         <section id="result">
 
             <!--<div id="result-state">
-
                 <h3 class="result-state__title">
                   Informações do estado
                 </h3>
-
                <div id="result-state__details">
                    <div class="stateDetails-container">
                       <div> 
                          <span class="stateDetails-container__title">
                             Tipo de Venda:
                          </span>
-
                          <span class="stateDetails-container__result">
                             string
                          </span>
@@ -515,7 +513,6 @@
                          <span class="stateDetails-container__title">
                             Tipo de lance:
                          </span>
-
                          <span class="stateDetails-container__result">
                             string
                          </span>
@@ -525,7 +522,6 @@
                          <span class="stateDetails-container__title">
                             Tipo de juros:
                          </span>
-
                          <span class="stateDetails-container__result">
                             string
                          </span>
@@ -535,24 +531,19 @@
                          <span class="stateDetails-container__title">
                             Período de alienação:
                          </span>
-
                          <span class="stateDetails-container__result">
                             string
                          </span>
-
                       </div>
                    </div>
-
                    <div class="stateDetails-container">
                       <div> 
                          <span> Website: </span>
-
                          <span class="stateDetails-container__result">
                             <a href="https://www.w3schools.com">
                                WebSite
                             </a>
                          </span>
-
                       </div>
                   
                       <div> 
@@ -579,39 +570,30 @@
                             string
                          </span>
                       </div>
-
                    </div>
                </div>
             </div>
-
             <div id="result_coountyAndCalendar">
                 <div class="result_county__container">              
                  <h3 class="result_county__title">
                    Condados em Washington
                  </h3>
-
                    <span class="result_county__item">
                       Adams
                    </span>
-
                    <span class="result_county__item">
                       Asotin
                    </span>
-
                    <span class="result_county__item">
                       Benton
                    </span>
-
                    <span class="result_county__item">
                       Chelan
                    </span>
-
                    <span class="result_county__item">
                       Clallam
                    </span>
-
                 </div>
-
                 <div class="result_county__container">              
                    <h3 class="result_county__title">
                      Calendário

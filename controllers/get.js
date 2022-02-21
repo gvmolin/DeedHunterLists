@@ -1,6 +1,6 @@
 const usStates = require('../db/geojson/us_states.json')
 const guide = require('../db/statesGuide.json')
-var request = require("request")
+const attorneys = require('../db/attorneys.json')
 const isAuth = require('../models/isAuth')
 
 module.exports = app => {
@@ -8,19 +8,19 @@ module.exports = app => {
         res.render('login.ejs')
     })
 
-    app.get('/', isAuth, async(req, res)=>{
+    app.get('/', async(req, res)=>{
         res.render('map.ejs', {user : req.session.user})
     })
 
-    app.get('/lists', isAuth, async(req, res)=>{
+    app.get('/lists', async(req, res)=>{
         res.render('lists.ejs')
     })
 
-    app.get('/listCalendar',isAuth, async(req, res)=>{
-        res.render('listCalendar.ejs')
+    app.get('/attorneys', async(req, res)=>{
+        res.render('attorneys.ejs')
     })
 
-    app.get('/landBank', isAuth, async(req, res)=>{
+    app.get('/landBank', async(req, res)=>{
         res.render('landBank.ejs')
     })
 
@@ -28,7 +28,10 @@ module.exports = app => {
         res.render('guide.ejs')
     })
 
-    
+    app.get('/termos',  async(req, res)=>{
+        res.render('termos.ejs')
+    })
+
 
 
 
@@ -38,21 +41,11 @@ module.exports = app => {
         res.send(usStates)
     })
 
-    app.get('/getinfo', async(req, res)=>{
-        var url = "https://www.taxsaleresources.com/DHSearchHandler.ashx?UserID=12345&UserName=dhapi&Password=7jOsbudk[!&CountyOtc=All&BidProcedures=All&AuctionType=All&State=All&County=All&SaleStart=2022-2-1&SaleEnd=2025-4-30&PageSize=1000&PageIndex=1&orderby=startdate&order=asc"
-        request({
-            url: url,
-            json: true
-        }, function (error, response, body) {
-        
-            if (!error && response.statusCode === 200) {
-                res.send(body)
-            }
-        })
-    })
-
     app.get('/getGuide', async(req, res)=>{
         res.send(guide)
-        console.log('fetch')
+    })
+
+    app.get('/getAttorneys', async(req, res)=>{
+        res.send(attorneys)
     })
 }

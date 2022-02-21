@@ -87,3 +87,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+#logo{
+	height: 100%;
+}
+
+#logo-container{
+	height: 100%;
+	display: flex;
+}

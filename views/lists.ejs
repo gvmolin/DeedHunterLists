@@ -21,14 +21,15 @@
             <i class="fas fa-bars" ></i>
           </label>
 
-          <a href="/"><img src="img/logo.png" alt="logo"></a>
+          <a href="/"><img src="img/logo.png" alt="logo"  id="logo"></a>
 
           <ul>
             <li> <a href="/">Mapa</a> </li>
             <li> <a href="/lists">Listas</a> </li>
             <li> <a href="/landBank">LandBank</a> </li>
             <li> <a href="/guide">Guia</a> </li>
-            <li> <a href="#">DeedHunter</a> </li>
+            <li> <a href="/attorneys">Attorneys</a> </li>
+            <li> <a href="/termos">Termos</a> </li>
           </ul>
         </nav>
       </header>
@@ -43,9 +44,30 @@
                 Exibindo <input type="number" value="10" step="5" /> itens por página
               </div>-->
 
-              <div class="paginationContainer-search" >
-                Estado: 
-                <select name="" id="states-select"></select>
+              <div class="paginationContainer-search search-menu" >
+                <div class="search-criteria">
+                  <h2>Estado: </h2>
+                  <select name="" id="states-select"></select>
+                </div>
+                <div class="search-criteria">
+                  <h2>Lista: </h2>
+                  <select name="" id="list-select">
+                    <option value="All">Todas</option>
+                    <option value="Deed">Deed</option>
+                    <option value="Lien">Lien</option>
+                    <option value="Redeemable Deed">Redeemable Deed</option>
+                  </select>
+                </div>
+                <div class="search-criteria">
+                  <h2>OTC: </h2>
+                  <select name="" id="otc-select">
+                    <option value="All">Todas</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                
+
                 <button id="search-button">Buscar</button>
               </div>
             </div>
@@ -57,7 +79,7 @@
                 <th scope="col" >Estado</th>
                 <th scope="col" >Condado</th>
                 <th scope="col" >Data</th>
-                <th scope="col" >Propriedades</th>
+                <th scope="col" >OTC</th>
                 <th scope="col" >Procedimento</th>
                 <th scope="col" >Tipo</th>
                 <th scope="col" >Arquivo</th>

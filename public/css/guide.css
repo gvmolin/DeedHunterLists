@@ -47,6 +47,25 @@ main {
   line-height: 1.5rem;
 }
 
+.attorneys-content__item{
+  display: flex;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1.5vh;
+}
+
+.attorneys-content__item h2{
+  color: rgb(255, 196, 45);
+  font-weight: 800;
+  margin-right: 1vh;
+  width: 10vw;
+}
+
+.attorneys-content__item h3{
+  width: 60vw;
+}
+
+
 @media (max-width: 768px) {
   
 }

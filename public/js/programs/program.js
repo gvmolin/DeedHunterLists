@@ -91,10 +91,23 @@ export async function loadStates(){
     return json
 }*/
 
+export function listJson(state, list, otc){
+   const str = `{
+         "state":"${state}",
+         "list":"${list}",
+         "otc":"${otc}"
+      }`
+
+   const json = JSON.parse(str)
+   return json
+}
+
 export function stateJson(state){
-    const str = `{"state":"${state}"}`
-    const json = JSON.parse(str)
-    return json
+   const str = `{
+      "state":"${state}"
+   }`
+   const json = JSON.parse(str)
+   return json
 }
 
 export function filterByState(extJson, intJson){ //---> extJson = The json that API send me, intJson = the search criteria on user page
@@ -130,7 +143,7 @@ export function renderResult(element, container){
          <td data-label="Estado" >${element.state}</td>
          <td data-label="Condado" >${element.county_name}</td>
          <td data-label="Data" >${ddmmyyyyFormat(element.sale_date)}</td>
-         <td data-label="Propriedades" >${element.parcel_num}</td>
+         <td data-label="Propriedades" >${element.OTC_1}</td>
          <td data-label="Procedimentos" >${element.bid_procedures}</td>
          <td data-label="Tipo" >${element.auction_type}</td>
          <td data-label="Arquivo" >
@@ -379,6 +392,44 @@ export function renderGuideItem(element, container){
           <p>
             ${element.info.details}
           </p>
+        </div>
+      </div>
+   
+   `
+   div.innerHTML = str
+   container.append(div)
+}
+
+export function renderAttorneyItem(element, container){
+   const div = document.createElement('div')
+   div.classList.add('guide')
+
+   const str = `
+      <div class="guide-header">
+         <h1>${element.name}</h1>
+      </div>
+
+      <div class="guide-content">
+        <div class="attorneys-content__item">
+            <h2>${element.primary_contact}</h2>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Endereço:</h2><h3> ${element.address}</h3>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Telefone: </h2><h3>${element.phone}</h3>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Fax: </h2><h3>${element.fax}</h3>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Email: </h2><h3>${element.email}</h3>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Website: </h2><h3>${element.website}</h3>
+        </div>
+        <div class="attorneys-content__item">
+            <h2>Sobre: </h2><h3>${element.about}</h3>
         </div>
       </div>
    

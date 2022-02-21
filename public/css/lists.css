@@ -77,6 +77,41 @@ table button:hover {
   filter: brightness(1.1);
 }
 
+.search-menu{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.search-menu button{
+  border: none;
+  background-color: var(--yellow);
+  border-radius: 0.3vh;
+  width: 4vw;
+}
+
+.search-menu button:hover{
+  cursor: pointer;
+  color: #ccc;
+  background-color: rgb(60, 60, 60);
+  transition: 0.5s;
+}
+
+.search-criteria{
+  display: flex;
+  align-items: center;
+}
+
+.search-criteria select{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.118);
+  border-radius: 0.3vh;
+  width: 6vw;
+  margin-left: 0.3vw;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .tableContainer-header_paginationContainer {
     flex-direction: column;
@@ -127,4 +162,42 @@ table button:hover {
   table td:last-child {
     border-bottom: 0;
   }
+
+  .search-menu{
+    
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .search-menu button{
+    border: none;
+    background-color: var(--yellow);
+    border-radius: 0.3vh;
+    width: 100%;
+    height: 4vh;
+  }
+  
+  .search-menu button:hover{
+    cursor: pointer;
+    color: #ccc;
+    background-color: rgb(60, 60, 60);
+    transition: 0.5s;
+  }
+  
+  .search-criteria{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+  }
+  
+  .search-criteria select{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.118);
+    border-radius: 0.3vh;
+    width: 70%;
+    margin-left: 0.3vw;
+    height: 4vh;
+  }
+
 }

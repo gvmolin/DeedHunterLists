@@ -2,7 +2,8 @@
 
 body, select, button {
   color: var(--font-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Teko', sans-serif;
 }
 
 body {
@@ -45,7 +46,8 @@ main {
   color: var(--gray-100);
   padding: 16px;
   border-radius: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Teko', sans-serif;
   margin-bottom: 2rem;
 }
 .result-state__title {
@@ -127,7 +129,7 @@ main {
 .text-legend{
   font-family: 'Teko';
   font-size: 2rem;
-  color: var(--gray-100);
+  color: black;
   letter-spacing: -1.4px;
   text-transform: uppercase;
 
@@ -146,7 +148,7 @@ main {
 }
 
 .legend-box > div {
-  width: 300px;
+  width: 10vw;
   margin: 10px;
   text-align: left;
   font-size: 30px;
@@ -154,15 +156,18 @@ main {
 
 #client-name{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  margin: 10vh 0 ;
 }
 
 #client-name h1{
-  color: var(--gray-100);
+  color: black;
   font-size: 2.5vh;
   font-weight: 800;
-  margin: 10vh 0 ;
+  
 }
 
 svg path:hover{
@@ -173,11 +178,31 @@ svg path:hover{
 
 .legend-box p {
   font-size: 2vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Teko', sans-serif;
 
 }
 
+#select-states-map{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.118);
+  border-radius: 0.3vh;
+  width: 10vw;
+  height: 3VH;
+  margin-left: 0.3vw;
+}
+
 @media (max-width: 1024px) {
+
+  #client-name h1{
+    text-align: center;
+  }
+
+
+
+  #select-states-map{
+    width: 30vw;
+  }
   
   #result-state, #result_coountyAndCalendar{
     margin: 2rem;
@@ -231,7 +256,8 @@ svg path:hover{
   
   .selectState-label {
     padding: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Teko', sans-serif;
     color: var(--gray-50);
     font-size: 1.5rem;
   }
@@ -250,7 +276,8 @@ svg path:hover{
   }
   
   .statesOptions > option {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Teko', sans-serif;
     padding: 10px;
     font-size: 1.5rem;
   }
@@ -263,7 +290,8 @@ svg path:hover{
     border: solid 2px var(--gray-100);
   }
   .text-legend{
-    font-family: 'Teko';
+    font-family: 'Lato', sans-serif;
+    font-family: 'Teko', sans-serif;
     font-size: 1.6rem;
     color: var(--gray-100);
     letter-spacing: -1.4px;
@@ -291,6 +319,14 @@ svg path:hover{
     margin: 10px;
     text-align: left;
     font-size: 30px;
+  }
+
+  #client-name .hide-mobile{
+    display: none;
+  }
+
+  body section{
+    margin: 0;
   }
 }
 

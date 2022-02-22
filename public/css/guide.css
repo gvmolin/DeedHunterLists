@@ -63,6 +63,9 @@ main {
 
 .attorneys-content__item h3{
   width: 60vw;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Teko', sans-serif;
+  font-size: 2vh;
 }
 
 

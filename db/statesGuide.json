@@ -68,7 +68,7 @@
         }
     },
     {
-        "state":"CALIFÓRNIA",
+        "state":"CALIFORNIA",
         "info":{
             "id":"CA",
             "address":"Califórnia State Controller's Office, P.O.Box 942850, Sacramento, CA 94250-5782",
@@ -85,7 +85,7 @@
         }
     },
     {
-        "state":"CAROLINA DO NORTE",
+        "state":"NORTH CAROLINA",
         "info":{
             "id":"NC",
             "address":"North Carolina Association of County Commissioners, 215 N Dawson Street, Raleigh, NC 27603",
@@ -102,7 +102,7 @@
         }
     },
     {
-        "state":"CAROLINA DO SUL",
+        "state":"SOUTH CAROLINA",
         "info":{
             "id":"SC",
             "address":"South Carolina Association of Counties, 1919 Thumond Mall, Columbia, SC 29201",
@@ -153,7 +153,7 @@
         }
     },
     {
-        "state":"DAKOTA DO NORTE",
+        "state":"NORTH DAKOTA",
         "info":{
             "id":"ND",
             "address":"North Dakota Association of Counties, PO Box 877, 1661 Capitol Way Bismarck, ND 58502-0877",
@@ -170,7 +170,7 @@
         }
     },
     {
-        "state":"DAKOTA DO SUL",
+        "state":"SOUTH DAKOTA",
         "info":{
             "id":"SD",
             "address":"South Dakota Association of Counties 211 East Prospect Ave. Pierre, SD 57501",
@@ -204,7 +204,7 @@
         }
     },
     {
-        "state":"DISTRITO DE COLUMBIA",
+        "state":"DISTRICT OF COLUMBIA",
         "info":{
             "id":"DC",
             "address":"Office of Tax and Revenue, 1101 4th Street SW #W270, Washington, DC 200240",
@@ -255,7 +255,7 @@
         }
     },
     {
-        "state":"HAVAÍ",
+        "state":"HAWAII",
         "info":{
             "id":"HI",
             "address":"Hawaii State Association of Counties, 4396 Rice Street, Kauai, HI 96766",

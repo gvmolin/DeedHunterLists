@@ -1,8 +1,8 @@
 import * as manager from "../programs/program.js";
 import * as path from "../programs/paths.js"
+const selectState = document.querySelector('#states-select')
 
-window.addEventListener('load', async()=>{
-    const selectState = document.querySelector('#states-select')
+window.addEventListener('load', async()=>{    
     const usStates = await fetch(path.getStates)
     const statesJson = await usStates.json()
 

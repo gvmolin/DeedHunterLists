@@ -26,9 +26,18 @@ module.exports = app => {
         var result = {}
         for(let i = 0; i<statesInfo.length; i++){
             const statesIndex = statesInfo[i]
-            //console.log(statesIndex.info.id)
             if(req.body.state == statesIndex.info.id){
-                //console.log(statesIndex.info.id)
+                result = statesIndex
+            }
+        }
+        res.send(result)
+    })
+
+    app.post('/statesInfoForSelect', async(req, res)=>{
+        var result = {}
+        for(let i = 0; i<statesInfo.length; i++){
+            const statesIndex = statesInfo[i]
+            if(req.body.state.toUpperCase() == statesIndex.state){
                 result = statesIndex
             }
         }

@@ -8,27 +8,27 @@ module.exports = app => {
         res.render('login.ejs')
     })
 
-    app.get('/', async(req, res)=>{
+    app.get('/', isAuth, async(req, res)=>{
         res.render('map.ejs', {user : req.session.user})
     })
 
-    app.get('/lists', async(req, res)=>{
+    app.get('/lists', isAuth, async(req, res)=>{
         res.render('lists.ejs')
     })
 
-    app.get('/attorneys', async(req, res)=>{
+    app.get('/attorneys', isAuth, async(req, res)=>{
         res.render('attorneys.ejs')
     })
 
-    app.get('/landBank', async(req, res)=>{
+    app.get('/landBank', isAuth, async(req, res)=>{
         res.render('landBank.ejs')
     })
 
-    app.get('/guide',  async(req, res)=>{
+    app.get('/guide',  isAuth, async(req, res)=>{
         res.render('guide.ejs')
     })
 
-    app.get('/termos',  async(req, res)=>{
+    app.get('/termos',  isAuth, async(req, res)=>{
         res.render('termos.ejs')
     })
 

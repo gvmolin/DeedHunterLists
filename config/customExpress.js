@@ -9,11 +9,11 @@ const cors = require("cors");
 module.exports = () => {
     const app = express()
    
-    const oneDay = 1000 * 60 * 60 * 9;
+    const threeHours = 1000 * 60 * 60 * 3;
     app.use(session({
     secret: process.env.SECRET,
     saveUninitialized:true,
-    cookie: { maxAge: oneDay },
+    cookie: { maxAge: threeHours},
     resave: false 
     }));
 

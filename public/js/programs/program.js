@@ -1,54 +1,34 @@
 import * as path from './paths.js'
 
-export async function loadCounties(){
-    const stateNumber = document.querySelector('#select-state').value
-    
-    const stateStr = `
-    {
-        "stateNumber":"${stateNumber}"
-    }
-    `
-    const json = JSON.parse(stateStr)
-    //console.log(json)
-    const container = document.querySelector('#select-county')
-    container.innerHTML = ''
-    createOption('all', 'all', container)
-    const response = await postData(json, path.counties)
-    for (var i = 0; i < response.data.length; i++) {
-        var index = response.data[i]
-        createOption(index.name, index.name, container)
-    }  
+export function createOption(inner, value, container) {
+   var opt = document.createElement("option")
+   opt.innerHTML = inner
+   opt.value = value
+   container.append(opt)
 }
 
-export function createOption(inner, value, container){
-    var opt = document.createElement("option")
-    opt.innerHTML = inner
-    opt.value = value
-    container.append(opt)
+export async function postData(json, path) {
+   try {
+      const options = {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(json)
+      }
+      const rawResponse = await fetch(path, options)
+      const responseJson = await rawResponse.json();
+      return responseJson
+   }
+   catch (error) {
+      console.log(error)
+   }
 }
 
-export async function postData(json, path){
-    try{
-        const options = {
-            method: 'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(json)
-        }
-        const rawResponse = await fetch(path, options)
-        const responseJson = await rawResponse.json();
-        return responseJson
-    }
-    catch(error){
-        console.log(error)
-    }
-}
-
-export function showStateQuery(container){
-    container.innerHTML = ''
-    const div = document.createElement('div')
-    const str = `
+export function showStateQuery(container) {
+   container.innerHTML = ''
+   const div = document.createElement('div')
+   const str = `
         <div>
             <label for="">State:</label>
             <select name="" id="select-state">
@@ -63,21 +43,21 @@ export function showStateQuery(container){
         </div>
         <button id="searchbystate-button">GO!</button>
     `
-    div.innerHTML = str
-    container.append(div)
+   div.innerHTML = str
+   container.append(div)
 
-    document.querySelector("#search-container-hr").style.display = 'block'
+   document.querySelector("#search-container-hr").style.display = 'block'
 }
 
-export async function loadStates(){
-    const container = document.querySelector('#select-state');
-    const result = await fetch(path.getStates)
-    const json = await result.json()
-    container.innerHTML = ""
-    for (let i = 0; i < json.features.length; i++) {
-        var statesIndex = json.features[i]
-        manager.createOption(statesIndex.properties.NAME, statesIndex.properties.STATE, container)
-    }
+export async function loadStates() {
+   const container = document.querySelector('#select-state');
+   const result = await fetch(path.getStates)
+   const json = await result.json()
+   container.innerHTML = ""
+   for (let i = 0; i < json.features.length; i++) {
+      var statesIndex = json.features[i]
+      manager.createOption(statesIndex.properties.NAME, statesIndex.properties.STATE, container)
+   }
 }
 
 /*export function byStateJson(){
@@ -91,7 +71,7 @@ export async function loadStates(){
     return json
 }*/
 
-export function listJson(state, list, otc){
+export function listJson(state, list, otc) {
    const str = `{
          "state":"${state}",
          "list":"${list}",
@@ -102,41 +82,47 @@ export function listJson(state, list, otc){
    return json
 }
 
-export function stateJson(state){
+export function stateJson(state, id) {
    const str = `{
-      "state":"${state}"
+      "state":"${state}",
+      "id":"${id}",
+      "stateNumber":"${id}"
    }`
    const json = JSON.parse(str)
    return json
 }
 
-export function filterByState(extJson, intJson){ //---> extJson = The json that API send me, intJson = the search criteria on user page
-    var arr = []
-   
-    //const countyStr = `${intJson.county} County`
-    for (let i = 0; i < extJson.length; i++) {
-        var resIndex = extJson[i]
-        if(intJson.state == resIndex.state){
-            arr.push(resIndex)
-        } 
-    }
-    return arr
+export async function filterByState(extJson, intJson) { //---> extJson = The json that API send me, intJson = the search criteria on user page
+   var arr = []
+
+   extJson.forEach(element => {
+      if (element.state !== null) {
+         const toUpperCase1 = element.state.toUpperCase()
+         if (intJson.state == element.state) {
+            arr.push(element)
+         } else if (intJson.state == toUpperCase1) {
+            arr.push(element)
+         }
+      }
+   })
+
+   return arr
 }
 
-export function filterByCounty(extJson, intJson){ //---> extJson = The json that API send me, intJson = the search criteria on user page
-    var arr = []
-   
-    const countyStr = `${intJson.county} County`
-    for (let i = 0; i < extJson.length; i++) {
-        var resIndex = extJson[i]
-        if(intJson.state == resIndex.state && countyStr == resIndex.county_name){
-            arr.push(resIndex)
-        } 
-    }
-    return arr
+export function filterByCounty(extJson, intJson) { //---> extJson = The json that API send me, intJson = the search criteria on user page
+   var arr = []
+
+   const countyStr = `${intJson.county} County`
+   for (let i = 0; i < extJson.length; i++) {
+      var resIndex = extJson[i]
+      if (intJson.state == resIndex.state && countyStr == resIndex.county_name) {
+         arr.push(resIndex)
+      }
+   }
+   return arr
 }
 
-export function renderResult(element, container){
+export function renderResult(element, container) {
    const div = document.createElement('tr')
    //div.classList.add('result-item')
    const str = `
@@ -153,232 +139,246 @@ export function renderResult(element, container){
    `
    div.innerHTML = str
    container.append(div)
-   div.children[0].addEventListener('click', ()=>{
-       accordion(div.children[0])
+   div.children[0].addEventListener('click', () => {
+      accordion(div.children[0])
    })
 
-   document.getElementById(element.auto_id).addEventListener('click', ()=>{
-      const url = `https://www.taxsaleresources.com/DHHandlerinterim.aspx?UserID=12345&UserName=dhapi&Password=7jOsbudk[!&file_id=${element.auto_id}&file_type=raw_list`
+   document.getElementById(element.auto_id).addEventListener('click', async() => {
+      const sessionId = await fetch('/sessionID')
+      const json = await sessionId.json()
+      
+      const url = `https://www.taxsaleresources.com/DHHandlerinterim.aspx?UserID=${json.sessionId}&UserName=dhapi&Password=7jOsbudk[!&file_id=${element.auto_id}&file_type=raw_list`
       window.open(url, '_blank');
    })
 }
 
-function ddmmyyyyFormat(dateCont){
-    const date = new Date(dateCont)
-    const day = ("" + date.getDate()).slice(-2)
-    const month = ("" + (date.getMonth() + 1)).slice(-2)
-    const ddmmyyyy = `${day}/${month}/${date.getFullYear()}`
-    
-    return ddmmyyyy
+function ddmmyyyyFormat(dateCont) {
+   const date = new Date(dateCont)
+   const day = ("" + date.getDate()).slice(-2)
+   const month = ("" + (date.getMonth() + 1)).slice(-2)
+   const ddmmyyyy = `${day}/${month}/${date.getFullYear()}`
+
+   return ddmmyyyy
 }
 
-export function renderStateInfo(element, container){
-    const div = document.createElement('div')
-    const str = `
-    <div id="result-state">
+export function renderStateInfo(element, container, countyList, calendarInfo) {
+   const div = document.createElement('div')
+   const str = `
+      <div id="result-state">
 
-    <h3 class="result-state__title">
-      ${element.state}
-    </h3>
+      <h3 class="result-state__title">
+        ${element.state}
+      </h3>
+         <div id="result-state__details">
+             <div class="stateDetails-container">
 
-   <div id="result-state__details">
-       <div class="stateDetails-container">
+               <div class="detailsContainer_item"> 
 
-          <div class="detailsContainer_item"> 
+                  <div class="detailsContainer_item_column">
 
-            <div class="detailsContainer_item_column">
+                     <span class="itemColumn-title">
+                        Endereço:
+                     </span>
 
-               <span class="itemColumn-title">
-                  Endereço:
-               </span>
+                     <span class="itemColumn-result">
+                        ${element.info.address}
+                     </span>
 
-               <span class="itemColumn-result">
-                  ${element.info.address}
-               </span>
-            
-            </div>
+                  </div>
 
-            <div class="detailsContainer_item_column"> 
+                  <div class="detailsContainer_item_column"> 
 
-               <span class="itemColumn-title">
-                  Website: 
-               </span>
+                     <span class="itemColumn-title">
+                        Website: 
+                     </span>
 
-               <span class="itemColumn-result">
-                  <a href="${element.info.site}">
-                     WebSite
-                  </a>
-               </span>
-            </div>
+                     <span class="itemColumn-result">
+                        <a href="${element.info.site}">
+                           WebSite
+                        </a>
+                     </span>
+                  </div>
 
+                </div>
+
+                <div class="detailsContainer_item">
+
+                  <div class="detailsContainer_item_column"> 
+                     <span class="itemColumn-title">
+                        Telefone:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.phone}
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Site de informações:
+                     </span>
+
+                     <span class="itemColumn-result"> 
+                        <a href="${element.info.infoSite}">
+                           WebSite
+                        </a>
+                     </span>
+
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item">
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Categoria
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.category}
+                     </span>
+
+                  </div>
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Site de associação de condados:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        <a href="${element.info.appraisalDistrictWebsite}">
+                           WebSite
+                        </a>
+                     </span>
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item">
+                  <div class="detailsContainer_item_column">
+                     <span class="itemColumn-title">
+                        Tipo de leilão:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.auctionType}
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        Taxa de Juros:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.interestRate}
+                     </span>
+
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item"> 
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        Número de condados:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.counties}
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        Prazo de resgate:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.info.redemptionPeriod}
+                     </span>
+
+                  </div>
+
+                </div>
+             </div>
+
+             </div>
+         </div>
+      </div>
+
+      <div id="result_coountyAndCalendar">
+          <div class="result_county__container">              
+           <h3 class="result_county__title">
+             Lista de condados
+           </h3>
+
+            <ul id="mappage_countylist">
+               
+            </ul>
           </div>
-      
-          <div class="detailsContainer_item">
+          
+          <div class="result_county__container">              
+             <h3 class="result_county__title">
+               Proximos leiloes
+             </h3>
 
-            <div class="detailsContainer_item_column"> 
-               <span class="itemColumn-title">
-                  Telefone:
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.phone}
-               </span>
-            </div>
-
-            <div class="detailsContainer_item_column"> 
-
-               <span class="itemColumn-title">
-                  Site de informações:
-               </span>
-
-               <span class="itemColumn-result"> 
-                  <a href="${element.info.infoSite}">
-                     WebSite
-                  </a>
-               </span>
-
-            </div>
-
+            <ul id="mappage_calendar">
+               
+            </ul>
           </div>
-      
-          <div class="detailsContainer_item">
+      </div>
 
-            <div class="detailsContainer_item_column"> 
+      <div id="result_coountyAndCalendar">
+          <div class="result_county__container result_guia__container">              
+           <h3 class="result_county__title">
+             Guia
+           </h3>
 
-               <span class="itemColumn-title">
-                  Categoria
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.category}
-               </span>
-
-            </div>
-
-            <div class="detailsContainer_item_column"> 
-
-               <span class="itemColumn-title">
-                  Site de associação de condados:
-               </span>
-
-               <span class="itemColumn-result">
-                  <a href="${element.info.appraisalDistrictWebsite}">
-                     WebSite
-                  </a>
-               </span>
-            </div>
-
+            <ul id="">
+               <li>${element.info.details}</li>
+            </ul>
           </div>
-      
-          <div class="detailsContainer_item">
-            <div class="detailsContainer_item_column">
-               <span class="itemColumn-title">
-                  Tipo de leilão:
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.auctionType}
-               </span>
-            </div>
-
-            <div class="detailsContainer_item_column">
-
-               <span class="itemColumn-title">
-                  Taxa de Juros:
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.interestRate}
-               </span>
-
-            </div>
-
-          </div>
-
-          <div class="detailsContainer_item"> 
-            <div class="detailsContainer_item_column">
-
-               <span class="itemColumn-title">
-                  Número de condados:
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.counties}
-               </span>
-            </div>
-
-            <div class="detailsContainer_item_column">
-
-               <span class="itemColumn-title">
-                  Prazo de resgate:
-               </span>
-
-               <span class="itemColumn-result">
-                  ${element.info.redemptionPeriod}
-               </span>
-
-            </div>
-
-          </div>
-       </div>
-
-       </div>
-   </div>
-</div>
-
-<!--<div id="result_coountyAndCalendar">
-    <div class="result_county__container">              
-     <h3 class="result_county__title">
-       Condados em Washington
-     </h3>
-
-       <span class="result_county__item">
-          Adams
-       </span>
-
-       <span class="result_county__item">
-          Asotin
-       </span>
-
-       <span class="result_county__item">
-          Benton
-       </span>
-
-       <span class="result_county__item">
-          Chelan
-       </span>
-
-       <span class="result_county__item">
-          Clallam
-       </span>
-
-    </div>
-
-    <div class="result_county__container">              
-       <h3 class="result_county__title">
-         Calendário
-       </h3>
-   
-         <span class="result_county__item">
-            25/01/2023
-         </span>
-     
-         <span class="result_county__item">
-            08/03/2022
-         </span>
-     
-     
-    </div>
-</div>-->
+          
+          
+      </div>
     `
-    div.innerHTML = str
-    container.append(div)
-    div.children[0].addEventListener('click', ()=>{
-        accordion(div.children[0])
-    })
+   div.innerHTML = str
+
+   container.append(div)
+
+   const countyListContainer = container.querySelector('#mappage_countylist')
+   countyListContainer.innerHTML = ''
+   countyList.data.forEach(element => createLi(element.name, countyListContainer, 'result_county__item', ''));
+
+   const calendarContainer = container.querySelector('#mappage_calendar')
+   calendarContainer.innerHTML = ''
+   if (calendarInfo.length > 0) {
+      calendarInfo.forEach(element => {
+         const dateStr = ddmmyyyyFormat(element.sale_date)
+         createLi(dateStr, calendarContainer, 'result_county__item', `- ${element.county_name}`)
+      })
+   } else {
+      createLi('Sem resultados', calendarContainer, 'result_county__item', '')
+   }
+
 }
 
-export function renderGuideItem(element, container){
+export function createLi(element, container, className, element2) {
+   const li = document.createElement('li')
+   li.classList.add(className)
+   li.innerHTML = `${element} ${element2}`
+   container.append(li)
+}
+
+export function renderGuideItem(element, container) {
    const div = document.createElement('div')
    div.classList.add('guide')
 
@@ -400,7 +400,7 @@ export function renderGuideItem(element, container){
    container.append(div)
 }
 
-export function renderAttorneyItem(element, container){
+export function renderAttorneyItem(element, container) {
    const div = document.createElement('div')
    div.classList.add('guide')
 
@@ -436,4 +436,6 @@ export function renderAttorneyItem(element, container){
    `
    div.innerHTML = str
    container.append(div)
+
+
 }

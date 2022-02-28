@@ -4,6 +4,7 @@ const attorneys = require('../db/attorneys.json')
 const isAuth = require('../models/isAuth')
 
 module.exports = app => {
+//////////////////////GET RENDERS
     app.get('/login', async(req, res)=>{
         res.render('login.ejs')
     })
@@ -32,11 +33,11 @@ module.exports = app => {
         res.render('termos.ejs')
     })
 
+    
 
 
 
-
-
+///////////////////GET FUNCTIONS
     app.get('/getStates', async(req, res)=>{
         res.send(usStates)
     })
@@ -47,5 +48,9 @@ module.exports = app => {
 
     app.get('/getAttorneys', async(req, res)=>{
         res.send(attorneys)
+    })
+
+    app.get('/sessionID',  async(req, res)=>{
+        res.send(`{"sessionId":"${req.session.idNumber}"}`)
     })
 }

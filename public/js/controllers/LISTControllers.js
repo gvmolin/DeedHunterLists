@@ -46,8 +46,9 @@ document.querySelector('#search-button').addEventListener('click', async(event)=
     if(stateValue == 'All'){
         filtered = result
     }else{
-        filtered = manager.filterByState(result, json)
+        filtered = await manager.filterByState(result, json)
     }
+    console.log(filtered)
     
     console.log(filtered)
     if(filtered.length > 0){

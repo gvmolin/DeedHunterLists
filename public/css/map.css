@@ -99,6 +99,7 @@ main {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 #result_coountyAndCalendar > div {
   width: 28rem;
@@ -109,6 +110,8 @@ main {
 .result_county__container {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  height: 30vh;
 }
 .result_county__title {
   font-size: 22px;
@@ -119,6 +122,10 @@ main {
   border-top: 1px solid var(--gray-50);
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+#result_coountyAndCalendar .result_guia__container{
+  width: 60rem;
 }
 
 .color-legend{
@@ -208,6 +215,10 @@ svg path:hover{
     margin: 2rem;
   }
 
+  #result_coountyAndCalendar .result_county__container{
+    width: 20rem;
+  }
+
   #result-state__details{
     display: flex;
     flex-direction: column;
@@ -223,7 +234,7 @@ svg path:hover{
     flex-direction: column;
   }
   #result_coountyAndCalendar > div {
-    width: unset;
+    width: 20vw;
     margin-bottom: 2rem;
   }
 
@@ -236,6 +247,10 @@ svg path:hover{
   .detailsContainer_item_column {
     width: unset;
     margin: 1rem 0;
+  }
+
+  #result_coountyAndCalendar .result_guia__container{
+    width: 20rem;
   }
 
 }
@@ -281,6 +296,8 @@ svg path:hover{
     padding: 10px;
     font-size: 1.5rem;
   }
+
+ 
   
 }
 @media (max-width: 768px){
@@ -328,5 +345,7 @@ svg path:hover{
   body section{
     margin: 0;
   }
+
+  
 }
 

@@ -1,3 +1,4 @@
+const usStates = require('../db/geojson/us_states.json')
 const usCounties = require('../db/geojson/us_counties.json')
 const statesInfo = require('../db/statesGuide.json')
 const hasher = require('wordpress-hash-node');
@@ -20,6 +21,30 @@ module.exports = app => {
         }
         const jsonStr = `{"data":[${arr}]}`
         res.send(jsonStr)
+    })
+
+    app.post('/getCountiesByStateName', async(req, res)=>{
+        //console.log(req.body)
+        let searchStateNumber
+        usStates.features.forEach(element => {
+            if(element.properties.NAME.toUpperCase() === req.body.state){
+                searchStateNumber = element.properties.STATE
+            }
+        });
+
+        var arr = []
+        for (var i = 0; i < usCounties.features.length; i++) {
+            var countiesIndex = usCounties.features[i]
+            var stateNumber = countiesIndex.properties.STATE
+            var countyName =  countiesIndex.properties.NAME
+            
+            if(stateNumber === searchStateNumber){
+                arr.push(`{"name":"${countyName}"}`)
+            }
+        }
+        const jsonStr = `{"data":[${arr}]}`
+        res.send(jsonStr)
+        
     })
 
     app.post('/statesInfo', async(req, res)=>{

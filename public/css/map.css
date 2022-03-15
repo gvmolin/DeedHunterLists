@@ -190,7 +190,7 @@ svg path:hover{
 
 }
 
-#select-states-map{
+.select-states{
   border: none;
   background-color: rgba(0, 0, 0, 0.118);
   border-radius: 0.3vh;
@@ -199,15 +199,43 @@ svg path:hover{
   margin-left: 0.3vw;
 }
 
+.wiki h1{
+  font-size: 3vh;
+  margin-bottom: 2vh;
+
+}
+
+.wiki a{
+  text-decoration: none;
+  color: var(--yellow);
+  padding-top: 1vh;
+
+}
+
+.wiki{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wiki_text_container{
+  height: fit-content;
+  overflow-y: hidden;
+}
+
+div .wiki_img img{
+  border-radius: 1vh;
+
+}
+
 @media (max-width: 1024px) {
 
   #client-name h1{
     text-align: center;
   }
 
-
-
-  #select-states-map{
+  .select-states{
     width: 30vw;
   }
   

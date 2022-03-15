@@ -143,10 +143,10 @@ export function renderResult(element, container) {
       accordion(div.children[0])
    })
 
-   document.getElementById(element.auto_id).addEventListener('click', async() => {
+   document.getElementById(element.auto_id).addEventListener('click', async () => {
       const sessionId = await fetch('/sessionID')
       const json = await sessionId.json()
-      
+
       const url = `https://www.taxsaleresources.com/DHHandlerinterim.aspx?UserID=${json.sessionId}&UserName=dhapi&Password=7jOsbudk[!&file_id=${element.auto_id}&file_type=raw_list`
       window.open(url, '_blank');
    })
@@ -436,6 +436,188 @@ export function renderAttorneyItem(element, container) {
    `
    div.innerHTML = str
    container.append(div)
+}
+
+export function renderWiki(element, container, text) {
+   const url = 'https://pt.wikipedia.org/wiki/'
+   let path
+   if(element.state.includes(' ')){
+      path = element.state.replace(/ /g, '_')
+   }else{
+      path = element.state
+   } 
+   const fullUrl = `${url}${path}`
 
 
+   const div = document.createElement('div')
+   const str = `
+      
+      <div id="result-state">
+      <h3 class="result-state__title">
+        ${element.state}
+      </h3>
+         <div id="result-state__details">
+             <div class="stateDetails-container">
+
+               <div class="detailsContainer_item"> 
+
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        Lema:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.lema}
+                     </span>
+
+                  </div>
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Apelido: 
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.nick}
+                     </span>
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item">
+
+                  <div class="detailsContainer_item_column"> 
+                     <span class="itemColumn-title">
+                        Capital:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.capital}
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Maior Cidade:
+                     </span>
+
+                     <span class="itemColumn-result"> 
+                        ${element.biggerCity}
+                     </span>
+
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item">
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Área
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.area} Km²
+                     </span>
+
+                  </div>
+
+                  
+
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        Densidade Populacional
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.density} habitantes por Km²
+                     </span>
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item">
+                  <div class="detailsContainer_item_column">
+                     <span class="itemColumn-title">
+                        PIB
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.pib} de Dólares
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        IDH:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.idh}
+                     </span>
+
+                  </div>
+
+                </div>
+
+                <div class="detailsContainer_item"> 
+                  <div class="detailsContainer_item_column">
+
+                     <span class="itemColumn-title">
+                        Fuso Horario:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.fuso}
+                     </span>
+                  </div>
+
+                  <div class="detailsContainer_item_column"> 
+
+                     <span class="itemColumn-title">
+                        População:
+                     </span>
+
+                     <span class="itemColumn-result">
+                        ${element.population} habitantes
+                     </span>
+                  </div>
+                </div>
+             </div>
+
+             </div>
+         </div>
+      </div>
+
+      <div id="result-state" class="wiki_img">
+         <img src="img/wiki_images/${element.state}.png" style="width:700px; align-self:center;"/>
+
+      </div>
+
+      <div id="result_coountyAndCalendar">
+          <div class="result_county__container result_guia__container wiki_text_container">              
+           <h3 class="result_county__title">
+             
+           </h3>
+
+            <ul>
+               <li>${text} <a href="${fullUrl}">Continuar Lendo...</a></li>
+               
+            </ul>
+          </div>
+          
+          
+      </div>
+    `
+   div.innerHTML = str
+
+   container.innerHTML = ''
+   container.append(div)
 }

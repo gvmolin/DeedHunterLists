@@ -58,6 +58,7 @@ module.exports = app => {
         res.send(result)
     })
 
+
     app.post('/statesInfoForSelect', async(req, res)=>{
         var result = {}
         for(let i = 0; i<statesInfo.length; i++){
@@ -94,7 +95,7 @@ module.exports = app => {
 
     app.post('/searchLists', async(req, res)=>{
         const today = yyyymmdd.today()
-        const twoWeeks = yyyymmdd.twoWeeks()
+        //const twoWeeks = yyyymmdd.twoWeeks()
         const fourWeeks = yyyymmdd.fourWeeks()
         
         var url = `https://www.taxsaleresources.com/DHSearchHandler.ashx?UserID=${req.session.idNumber}&UserName=${process.env.API_USERNAME}&Password=${process.env.API_PASSWORD}&CountyOtc=${req.body.otc}&BidProcedures=All&AuctionType=${req.body.list}&State=All&County=All&SaleStart=${today}&SaleEnd=${fourWeeks}&PageSize=10000&PageIndex=1&orderby=startdate&order=asc`

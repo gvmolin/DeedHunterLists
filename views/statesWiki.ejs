@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link type="text/css" rel="stylesheet" href="css/global.css">
+  <link type="text/css" rel="stylesheet" href="css/map.css">
+  <link type="text/css" rel="stylesheet" href="css/appBar.css">
+  <script src="https://kit.fontawesome.com/30836ed2bd.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <title>Hunterlists</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body id="map-body">
+  <div id="container">
+    <!-- Menu -->
+    <header id="appBar">
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <a href="/"><img src="img/logo.png" alt="logo" id="logo"></a>
+
+        <ul>
+          <li> <a href="/">Mapa</a> </li>
+          <li> <a href="/lists">Listas</a> </li>
+          <li> <a href="/landBank">LandBanks</a> </li>
+          <li> <a href="/guide">Guia</a> </li>
+          <li> <a href="/attorneys">Attorneys</a> </li>
+          <li> <a href="/wiki">Wiki</a> </li>
+          <li> <a href="/termos">Termos</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-main">
+        
+        <section class="wiki">
+          <h1 class="hide-mobile">Selecione o estado</h1>
+          <select name="" id="select-states-wiki" class="select-states"></select>
+        </section>
+        <section id="result" class="wiki">
+          <h1>Wiki Info</h1>
+          <div id="wiki-info">
+            
+
+
+          </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+  </div>
+
+  <script src="js/controllers/statesWikiControllers.js" async type="module"></script>
+  <script src="js/programs/onclickevents.js"></script>
+</body>
+
+</html>
